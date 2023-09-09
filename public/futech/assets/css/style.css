@@ -1,0 +1,432 @@
+/* Navigation */
+
+.main-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .affix {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: 0.3s ease-in;
+    animation: upsdown 1000ms;
+  }
+  
+  @keyframes upsdown {
+    0% {
+      transform: translateY(-100px);
+      visibility: hidden;
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+  .nav {
+    padding: 0 16px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 5px 6px 60px rgba(17, 29, 59, 0.04);
+  }
+  
+  .nav__data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    display: inline-flex;
+    align-items: center;
+    -moz-column-gap: 0.25rem;
+         column-gap: 0.25rem;
+    font-weight: 600;
+    width: 80px;
+    transition: color 0.3s;
+  }
+  
+  .nav__toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+  
+  .nav__toggle-menu,
+  .nav__toggle-close {
+    font-size: 1.25rem;
+    color: black;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    cursor: pointer;
+    transition: opacity 0.1s, transform 0.4s;
+  }
+  
+  .nav__toggle-close {
+    opacity: 0;
+  }
+  
+  /* For Mobile Devices */
+  
+  @media screen and (max-width: 1118px) {
+    .nav {
+      padding: 10px;
+    }
+  
+    .nav__menu {
+      background-color: white;
+      position: absolute;
+      left: 0;
+      top: 2.5rem;
+      width: 90%;
+      height: auto;
+      overflow: auto;
+      padding-block: 1.5rem 4rem;
+      pointer-events: none;
+      opacity: 0;
+      transition: top 0.4s, opacity 0.3s;
+    }
+  
+    .nav__menu::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+  
+    .nav__menu::-webkit-scrollbar-thumb {
+      background-color: hsl(220, 12%, 70%);
+    }
+  
+    .dropdown__container {
+      padding-left: 40px;
+      border-radius: 0;
+    }
+  
+    .dropdown__list {
+      row-gap: 10px;
+    }
+  }
+  
+  .nav__link {
+    color: #04091e;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+    font-weight: 500;
+  }
+  
+  .nav.nav-dev .nav-list .nav__link:hover {
+    color: #daed1a;
+  }
+  
+  .nav__link:hover {
+    background-color: #F5F5F5;
+  }
+  
+  /* Show Menu */
+  
+  .show-menu {
+    opacity: 1;
+    top: 135px;
+    pointer-events: initial;
+    z-index: 50;
+    margin-left: 20px;
+  }
+  
+  .main-menu.sticky-header.affix .show-menu {
+    top: 85px;
+  }
+  
+  /* Show icon */
+  
+  .show-icon .nav__toggle-menu {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  
+  .show-icon .nav__toggle-close {
+    opacity: 1;
+    transform: rotate(90deg);
+  }
+  
+  /* Dropdown Button */
+  
+  .dropdown__button {
+    cursor: pointer;
+  }
+  
+  .dropdown__arrow {
+    font-size: 16px;
+    transition: transform 0.4s;
+  }
+  
+  .dropdown__content,
+  .dropdown__group,
+  .dropdown__list {
+    display: grid;
+  }
+  
+  .dropdown__container {
+    /* background-color: rgb(213, 213, 239); */
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s;
+    border-radius: 6px;
+  }
+  
+  .dropdown__icon {
+    font-size: 1.25rem;
+    color: #2662fa;
+  }
+  
+  .drowpdown__link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111111;
+    transition: color 0.3s;
+  }
+  
+  .drowpdown__link:hover {
+    color: #2662fa;
+  }
+  
+  .show-dropdown .dropdown__arrow {
+    transform: rotate(180deg);
+  }
+  
+  /* For small device */
+  
+  @media screen and (max-width: 300px) {
+    .dropdown__group {
+      padding-left: 1.5rem;
+    }
+  }
+  
+  /* For large */
+  
+  @media screen and (min-width: 1118px) {
+    /* nav */
+  
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .nav__toggle {
+      display: none;
+    }
+  
+    .nav__list {
+      display: flex;
+      -moz-column-gap: 40px;
+           column-gap: 40px;
+      height: 100%;
+    }
+  
+    .nav__link {
+      padding: 30px 0;
+      font-size: 16px;
+      color: #04091e;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+  
+    .nav.nav-teacher .nav__link:hover {
+      color: #fdcc04;
+    }
+  
+    .nav.nav-dev .nav__link:hover {
+      color: #daed1a;
+    }
+  
+    .nav.nav-law .nav__link:hover {
+      color: #ff3f00;
+    }
+  
+    .nav__link:hover {
+      background-color: initial;
+    }
+  
+    /* Dropdown */
+  
+    .dropdown__button {
+      -moz-column-gap: 0.25rem;
+           column-gap: 0.25rem;
+      pointer-events: none;
+    }
+  
+    .dropdown__container {
+      height: -moz-max-content;
+      height: max-content;
+      position: absolute;
+      width: 200px;
+      left: 0;
+      right: 0;
+      top: 6.5rem;
+      box-shadow: 5px 6px 60px rgba(17, 29, 59, 0.04);
+      background-color: white;
+      z-index: 100;
+      opacity: 0;
+      pointer-events: none;
+      transition: top 0.4s, opacity 0.3s;
+    }
+  
+    .dropdown__content {
+      margin-inline: auto;
+    }
+  
+    .dropdown__group {
+      /* padding: 4rem 0; */
+      align-content: baseline;
+      /* row-gap: 1.25rem; */
+    }
+  
+    .dropdown__icon {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .dropdown__icon i {
+      font-size: 16px;
+    }
+  
+    .dropdown__list li:first-child {
+      padding-top: 15px;
+    }
+  
+    .dropdown__list li {
+      padding: 0 0 15px 20px;
+    }
+  
+    .dropdown__link {
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+  
+    .dropdown__link:hover {
+      color: #2662fa;
+    }
+  
+    .dropdown__list.teacher-dropdown .dropdown__link:hover {
+      color: #fdcc04;
+    }
+  
+    .dropdown__list.law-dropdown .dropdown__link:hover {
+      color: #ff3f00;
+    }
+  
+    .dropdown__list.dev-dropdown .dropdown__link:hover {
+      color: #daed1a;
+    }
+  
+    .dropdown__item {
+      cursor: pointer;
+      position: relative;
+    }
+  
+    .nav__link:hover,
+    .dropdown__item:hover .nav__link {
+      color: #2662fa;
+    }
+  
+    .nav.nav-dev .nav__link:hover,
+    .nav.nav-dev .dropdown__item:hover .nav__link {
+      color: #daed1a;
+    }
+  
+    .nav.nav-teacher .nav__link:hover,
+    .nav.nav-teacher .dropdown__item:hover .nav__link {
+      color: #fdcc04;
+    }
+  
+    .nav.nav-law .nav__link:hover,
+    .nav.nav-law .dropdown__item:hover .nav__link {
+      color: #ff3f00;
+    }
+  
+    /* rotate dropdown icon */
+  
+    .dropdown__item:hover .dropdown__arrow {
+      transform: rotate(180deg);
+    }
+  
+    /* show dropdown */
+  
+    .dropdown__item:hover > .dropdown__container {
+      top: 84px;
+      opacity: 1;
+      pointer-events: initial;
+      cursor: initial;
+    }
+  }
+  .text-porange-700{
+    --tw-text-opacity: 1;
+    color: rgb(253 204 4 / var(--tw-text-opacity));
+  }
+  .hover\:text-porange-700:hover{
+    --tw-text-opacity: 1;
+    color: rgb(253 204 4 / var(--tw-text-opacity));
+  }
+  .bg-porange-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(253 204 4 / var(--tw-bg-opacity));
+  }
+  .hover\:bg-porange-700:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(253 204 4 / var(--tw-bg-opacity));
+  }
+  .group:hover .group-hover\:bg-porange-700{
+    --tw-bg-opacity: 1;
+    background-color: rgb(253 204 4 / var(--tw-bg-opacity));
+  }
+  .text-interface-200{
+    --tw-text-opacity: 1;
+    color: rgb(116 118 129 / var(--tw-text-opacity));
+  }
+  .placeholder\:text-interface-200::-moz-placeholder{
+    --tw-text-opacity: 1;
+    color: rgb(116 118 129 / var(--tw-text-opacity));
+  }
+  
+  .placeholder\:text-interface-200::placeholder{
+    --tw-text-opacity: 1;
+    color: rgb(116 118 129 / var(--tw-text-opacity));
+  }
+  .bg-interface-100{
+    --tw-bg-opacity: 1;
+    background-color: rgb(4 9 30 / var(--tw-bg-opacity));
+  }
+  .group:hover .group-hover\:bg-interface-100{
+    --tw-bg-opacity: 1;
+    background-color: rgb(4 9 30 / var(--tw-bg-opacity));
+  }
+  .gradient-text {
+    font-size: 42px;
+    background: -webkit-linear-gradient(#eee, #04091e);
+    opacity: 0.1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    position: relative;
+    top: 30px;
+}
+.pt-\[235px\] {
+  padding-top: 235px;
+}
+.pb-\[100px\] {
+  padding-bottom: 100px;
+}
