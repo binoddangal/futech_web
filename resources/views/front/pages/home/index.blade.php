@@ -46,54 +46,6 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                 </div>
             </div>
         </section>
-        <section class="pb-10">
-            <div class="container mx-auto px-4">
-                <div data-aos="flip-up" class="flex flex-wrap aos-init aos-animate">
-                    <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                        <div
-                            class="relative flex flex-col min-w-0 break-words bg-white shadow-md hover:shadow-xl hover:bg-yellow-50 transform hover:scale-110 transition duration-500 w-full mb-8 rounded-lg">
-                            <div class="px-4 py-5 flex-auto">
-                                <div
-                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <h6 class="text-xl font-medium">Our Mission</h6>
-                                <p class="mt-2 mb-4 text-gray-500">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                        <div
-                            class="relative flex flex-col min-w-0 break-words bg-white shadow-md hover:shadow-xl hover:bg-yellow-50 transform hover:scale-110 transition duration-500 w-full mb-8 rounded-lg">
-                            <div class="px-4 py-5 flex-auto">
-                                <div
-                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                                    <i class="fas fa-eye"></i>
-                                </div>
-                                <h6 class="text-xl font-medium">Our Vision</h6>
-                                <p class="mt-2 mb-4 text-gray-500">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                        <div
-                            class="relative flex flex-col min-w-0 break-words bg-white shadow-md hover:shadow-xl hover:bg-yellow-50 transform hover:scale-110 transition duration-500 w-full mb-8 rounded-lg">
-                            <div class="px-4 py-5 flex-auto">
-                                <div
-                                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400">
-                                    <i class="fas fa-crosshairs"></i>
-                                </div>
-                                <h6 class="text-xl font-medium">Our Goal</h6>
-                                <p class="mt-2 mb-4 text-gray-500">Lorem Ipsum is simply dummy text of the printing and
-                                    typesetting industry.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="lg:py-120 py-20 bg-green-50">
             <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div class="max-w-2xl mx-auto mb-10 text-center">

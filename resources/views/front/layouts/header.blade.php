@@ -7,28 +7,28 @@
 
                     <div class="flex items-center space-x-2">
                         <i class="fas fa-envelope text-porange-700"></i>
-                        <a href="#" class="text-black text-base"><span>info@futech.com</span></a>
+                        <a href="mailto:contact@futechnepal.com" class="text-black text-base"><span>contact@futechnepal.com</span></a>
                     </div>
 
                     <div class="space-x-2 hidden md:flex items-center">
                         <i class="fas fa-phone text-porange-700"></i>
-                        <a href="#" class="text-black text-base">+977 9860098323</a>
+                        <a href="tel:9860307418" class="text-black text-base">977 986-0307418</a>
                     </div>
                 </div>
             </div>
             <div class="flex items-center space-x-6">
-                <a href="http://" class="group transition-all text-black hover:text-porange-700" target="_blank">
+                <a href="https://www.facebook.com/futechnepal" class="group transition-all text-black hover:text-porange-700" target="_blank">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="http://" class="group transition-all text-black hover:text-porange-700" target="_blank">
+                {{-- <a href="http://" class="group transition-all text-black hover:text-porange-700" target="_blank">
                     <i class="fab fa-twitter"></i>
+                </a> --}}
+                <a href="https://www.instagram.com/futechnepal/" class="group transition-all text-black hover:text-porange-700" target="_blank">
+                    <i class="fab fa-instagram"></i>
                 </a>
-                <a href="http://" class="group transition-all text-black hover:text-porange-700" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="http://" class="group transition-all text-black hover:text-porange-700" target="_blank">
+                {{-- <a href="http://" class="group transition-all text-black hover:text-porange-700" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
-                </a>
+                </a> --}}
             </div>
         </div>
     </div>
@@ -63,25 +63,19 @@
                         </li>
 
                         <li class="">
-                            <a href="#" class="nav__link">
+                            <a href="{{ route('service') }}" class="nav__link">
                                 Services
                             </a>
                         </li>
 
                         <li class="">
-                            <a href="#" class="nav__link">
-                                Portfolio
-                            </a>
-                        </li>
-
-                        <li class="">
-                            <a href="#" class="nav__link">
+                            <a href="{{ route('blog') }}" class="nav__link">
                                 Blog
                             </a>
                         </li>
 
                         <li class="">
-                            <a href="#" class="nav__link">
+                            <a href="{{ route('about') }}" class="nav__link">
                                 About Us
                             </a>
                         </li>
