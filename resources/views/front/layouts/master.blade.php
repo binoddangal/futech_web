@@ -40,13 +40,12 @@
 
     <section class="px-4 bg-interface-100 py-5">
         <p class="text-base font-medium text-white text-center">
-            Copyright &copy; 2023 – All Rights Reserved. Made by
-            <a href="https://dangalbinod.com.np/" target="_blank">Binod</a>
+            Copyright &copy; 2023 – All Rights Reserved.
         </p>
     </section>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="{{asset('futech/assets/js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('futech/assets/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('futech/assets/js/app.js')}}"></script>
 </body>
 
 </html>

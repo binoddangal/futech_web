@@ -53,8 +53,64 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
                         </h4>
                         <p class="text-lg text-interface-200 not-italic">
                             Open a chat or give us call at <br>
-                            <a href="tel:310 841 5500" class="font-bold text-interface-100">977 01-4587415</a>
+                            <a href="tel:9860307418" class="font-bold text-interface-100">977 986-0307418</a> <br>
+                            <a href="mailto:contact@futechnepal.com" class="font-bold text-interface-100">contact@futechnepal.com</a>
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20">
+        <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="place-items-center">
+                <div class="xl:col-span-4">
+
+                    <div class="px-8 py-10 rounded-lg"
+                        style="
+                          background: url('{{asset('futech/assets/images/bg/contact-form-bg-shape.jpg')}}')
+                            no-repeat center center/cover;
+                        ">
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-7 gap-y-5">
+                                <div>
+                                    <label for="fname"
+                                        class="block mb-2 text-base font-medium text-interface-100">First Name</label>
+                                    <input type="text" placeholder="Max"
+                                        class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-blue-200 placeholder:text-sm focus:ring-0 focus:border focus:border-blue-700">
+                                </div>
+                                <div>
+                                    <label for="lname"
+                                        class="block mb-2 text-base font-medium text-interface-100">Last Name</label>
+                                    <input type="text" placeholder="Mustermann"
+                                        class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm focus:ring-0 focus:border focus:border-porange-700">
+                                </div>
+                                <div>
+                                    <label for="email"
+                                        class="block mb-2 text-base font-medium text-interface-100">Email</label>
+                                    <input type="text" placeholder="Mustermann"
+                                        class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm focus:ring-0 focus:border focus:border-porange-700">
+                                </div>
+                                <div>
+                                    <label for="telephone"
+                                        class="block mb-2 text-base font-medium text-interface-100">Telephone</label>
+                                    <input type="text" placeholder="Mustermann"
+                                        class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm focus:ring-0 focus:border focus:border-porange-700">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label for="telephone"
+                                        class="block mb-2 text-base font-medium text-interface-100">Description</label>
+                                    <textarea type="text" placeholder="Mustermann"
+                                        class="px-4 py-2.5 bg-white rounded-lg border-0 w-full placeholder:text-interface-200 placeholder:text-sm resize-none h-40 focus:ring-0 focus:border focus:border-porange-700">                      </textarea>
+                                </div>
+                            </div>
+                            <div class="mt-8 flex justify-end">
+                                <button
+                                    class="py-4 px-6 rounded-lg bg-porange-700 transition-all hover:bg-porange-900 text-interface-100 font-medium text-lg">
+                                    Send Now
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
