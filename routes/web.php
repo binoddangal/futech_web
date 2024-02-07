@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+require __DIR__ . '/admin.php';
 require __DIR__ . '/front.php';
