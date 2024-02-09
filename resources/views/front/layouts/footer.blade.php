@@ -1,6 +1,6 @@
 <footer class="lg:py-120 py-20 border-y border-[#1C2134]"
 style="
-background: url('{{asset("futech/assets/images/bg/footer-dark-bg.jpg")}}') no-repeat center
+background: url('{{asset("assets/images/bg/footer-dark-bg.jpg")}}') no-repeat center
   center/cover;
 ">
 <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -8,7 +8,7 @@ background: url('{{asset("futech/assets/images/bg/footer-dark-bg.jpg")}}') no-re
         class="grid md:grid-cols-12 divide-y md:divide-y-0 lg:divide-x divide-white divide-opacity-10 justify-between gap-10">
         <div class="md:col-span-6 lg:col-span-3">
             <a href="index.html" class="block mb-7">
-                <img class="w-52" src="{{asset('futech/assets/images/logo/Futech_LogoWhite.png')}}" alt />
+                <img class="w-52" src="{{asset('assets/images/logo/Futech_LogoWhite.png')}}" alt />
             </a>
             <p class="text-white text-base">
                 We work with a passion of taking challenges and creating new ones

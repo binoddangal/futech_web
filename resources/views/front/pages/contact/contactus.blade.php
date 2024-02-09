@@ -4,7 +4,7 @@
 <main>
     <section class="pt-[235px] pb-[100px]"
         style="
-background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat center
+background: url('{{asset('assets/images/bg/brcm.jpg')}}') no-repeat center
   center/cover;
 ">
         <div class="max-w-lg mx-auto text-center">
@@ -31,7 +31,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
 
                 <div class="flex flex-col md:flex-row  gap-6 py-14 px-20">
                     <div>
-                        <img src="{{asset('futech/assets/images/icons/ci-1.svg')}}" alt="">
+                        <img src="{{asset('assets/images/icons/ci-1.svg')}}" alt="">
                     </div>
                     <div class="grow">
                         <h4 class="text-2xl font-semibold text-interface-100">
@@ -45,7 +45,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
 
                 <div class="flex flex-col md:flex-row gap-6 py-14 px-20">
                     <div>
-                        <img src="{{asset('futech/assets/images/icons/ci-2.svg')}}" alt="">
+                        <img src="{{asset('assets/images/icons/ci-2.svg')}}" alt="">
                     </div>
                     <div class="grow">
                         <h4 class="text-2xl font-semibold text-interface-100">
@@ -68,7 +68,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
 
                     <div class="px-8 py-10 rounded-lg"
                         style="
-                          background: url('{{asset('futech/assets/images/bg/contact-form-bg-shape.jpg')}}')
+                          background: url('{{asset('assets/images/bg/contact-form-bg-shape.jpg')}}')
                             no-repeat center center/cover;
                         ">
                         <form>

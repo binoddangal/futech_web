@@ -4,7 +4,7 @@
     <main>
         <section class="pt-[235px] pb-[100px]"
             style="
-background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat center
+background: url('{{ asset('assets/images/bg/brcm.jpg') }}') no-repeat center
   center/cover;
 ">
             <div class="max-w-lg mx-auto text-center">

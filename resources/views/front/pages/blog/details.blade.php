@@ -4,7 +4,7 @@
     <main>
         <section class="pt-[235px] pb-[100px]"
             style="
-background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat center
+background: url('{{ asset('assets/images/bg/brcm.jpg') }}') no-repeat center
   center/cover;
 ">
             <div class="max-w-lg mx-auto text-center">
@@ -31,7 +31,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                     <div class="w-full lg:w-8/12">
                         <div class="mt-6">
                             <div class="max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
-                                <div class="w-full bg-cover bg-center" style="height:20rem; background-image: url('{{asset('futech/assets/images/bg/hero-2.jpg')}}');">
+                                <div class="w-full bg-cover bg-center" style="height:20rem; background-image: url('{{asset('assets/images/bg/hero-2.jpg')}}');">
                                 </div>
                                 <div class="flex py-2 items-center justify-between"><span class="font-light text-gray-600">March 27,
                                         2020</span><a href="#" class="px-2 py-1 font-bold text-white bg-gray-600 rounded hover:bg-gray-800">Category</a>

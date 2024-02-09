@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin portal - NTCC @yield('title')</title>
+    <title>Admin portal - Futech solution @yield('title')</title>
     <base href="{{ env('APP_FULL_URL') }}/" />
     <!-- Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
