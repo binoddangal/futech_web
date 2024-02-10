@@ -4,7 +4,7 @@
     <main>
         <section class="pt-36"
             style="
-  background: url('{{ asset('futech/assets/images/bg/hero-2.jpg') }}') no-repeat center
+  background: url('{{ asset('assets/images/bg/hero-2.jpg') }}') no-repeat center
 center/cover;
 ">
             <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -29,7 +29,7 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                     </div>
                     <div class="lg:w-1/2 order-1 lg:order-2">
                         <div class="relative ">
-                            <img src="{{ asset('futech/assets/images/person.png') }}" alt />
+                            <img src="{{ asset('assets/images/person.png') }}" alt />
                             <ul class="hidden xl:block">
                                 <li class="absolute -left-20 top-52">
                                     <img src="assets/images/hero/hero-two/sh-1.png" alt />
@@ -63,7 +63,7 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                             Design</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('futech/assets/images/icons/ui.svg')}}" alt="">
+                            <img src="{{asset('assets/images/icons/ui.svg')}}" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             UI Design
@@ -90,7 +90,7 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                             Design</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('futech/assets/images/icons/ux.svg')}}" alt="">
+                            <img src="{{asset('assets/images/icons/ux.svg')}}" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             UX Design
@@ -117,7 +117,7 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                             Design</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('futech/assets/images/icons/pd.svg')}}" alt="">
+                            <img src="{{asset('assets/images/icons/pd.svg')}}" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             Product Design
@@ -144,7 +144,7 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                             Marketing</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('futech/assets/images/icons/mk.svg')}}" alt="">
+                            <img src="{{asset('assets/images/icons/mk.svg')}}" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             Digital Marketing
@@ -171,7 +171,7 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                             Writing</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('futech/assets/images/icons/cont.svg')}}" alt="">
+                            <img src="{{asset('assets/images/icons/cont.svg')}}" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             Content Writing
@@ -198,7 +198,7 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                             Specialist</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('futech/assets/images/icons/search.svg')}}" alt="">
+                            <img src="{{asset('assets/images/icons/search.svg')}}" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             SEO Specialist
@@ -311,16 +311,16 @@ background: url('assets/images/shape/line-t.svg') no-repeat bottom;
                     <div class="lg:col-span-3 w-full">
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10">
                             <div>
-                                <img class="h-20 w-20" src="{{asset('futech/assets/images/clients/logo (1).png')}}" alt="">
+                                <img class="h-20 w-20" src="{{asset('assets/images/clients/logo (1).png')}}" alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full" src="{{asset('futech/assets/images/clients/logo.png')}}" alt="">
+                                <img class="h-20 w-full" src="{{asset('assets/images/clients/logo.png')}}" alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full" src="{{asset('futech/assets/images/clients/QUEEN-PNG.png')}}" alt="">
+                                <img class="h-20 w-full" src="{{asset('assets/images/clients/QUEEN-PNG.png')}}" alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full" src="{{asset('futech/assets/images/clients/Royal-musk.png')}}" alt="">
+                                <img class="h-20 w-full" src="{{asset('assets/images/clients/Royal-musk.png')}}" alt="">
                             </div>
                         </div>
                     </div>

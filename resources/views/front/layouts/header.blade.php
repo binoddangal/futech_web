@@ -38,7 +38,7 @@
             <nav class="nav nav-teacher">
                 <div class="nav__data">
                     <a href="{{ route('home') }}" class="nav__logo">
-                        <img src="{{ asset('futech/assets/images/logo/Futech_Logo.png') }}" alt />
+                        <img src="{{ asset('assets/images/logo/Futech_Logo.png') }}" alt />
                     </a>
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="fas fa-bars nav__toggle-menu"></i>

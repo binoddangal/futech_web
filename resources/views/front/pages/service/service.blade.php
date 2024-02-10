@@ -4,7 +4,7 @@
 <main>
     <section class="pt-[235px] pb-[100px]"
         style="
-background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat center
+background: url('{{asset('assets/images/bg/brcm.jpg')}}') no-repeat center
   center/cover;
 ">
         <div class="max-w-lg mx-auto text-center">
@@ -39,7 +39,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
                     <span class="gradient-text">UI <br>
                         Design</span>
                     <div class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                        <img src="http://futech.local/futech/assets/images/icons/ui.svg" alt="">
+                        <img src="http://futech.local/assets/images/icons/ui.svg" alt="">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-interface-100">
                         UI Design
@@ -63,7 +63,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
                     <span class="gradient-text">UX <br>
                         Design</span>
                     <div class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                        <img src="http://futech.local/futech/assets/images/icons/ux.svg" alt="">
+                        <img src="http://futech.local/assets/images/icons/ux.svg" alt="">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-interface-100">
                         UX Design
@@ -87,7 +87,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
                     <span class="gradient-text">Product <br>
                         Design</span>
                     <div class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                        <img src="http://futech.local/futech/assets/images/icons/pd.svg" alt="">
+                        <img src="http://futech.local/assets/images/icons/pd.svg" alt="">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-interface-100">
                         Product Design
@@ -111,7 +111,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
                     <span class="gradient-text">Digital <br>
                         Marketing</span>
                     <div class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                        <img src="http://futech.local/futech/assets/images/icons/mk.svg" alt="">
+                        <img src="http://futech.local/assets/images/icons/mk.svg" alt="">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-interface-100">
                         Digital Marketing
@@ -135,7 +135,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
                     <span class="gradient-text">Content <br>
                         Writing</span>
                     <div class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                        <img src="http://futech.local/futech/assets/images/icons/cont.svg" alt="">
+                        <img src="http://futech.local/assets/images/icons/cont.svg" alt="">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-interface-100">
                         Content Writing
@@ -159,7 +159,7 @@ background: url('{{asset('futech/assets/images/bg/brcm.jpg')}}') no-repeat cente
                     <span class="gradient-text">SEO<br>
                         Specialist</span>
                     <div class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                        <img src="http://futech.local/futech/assets/images/icons/search.svg" alt="">
+                        <img src="http://futech.local/assets/images/icons/search.svg" alt="">
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-interface-100">
                         SEO Specialist

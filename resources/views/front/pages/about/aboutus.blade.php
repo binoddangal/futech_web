@@ -4,7 +4,7 @@
     <main>
         <section class="pt-[235px] pb-[100px]"
             style="
-background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat center
+background: url('{{ asset('assets/images/bg/brcm.jpg') }}') no-repeat center
   center/cover;
 ">
             <div class="max-w-lg mx-auto text-center">
@@ -29,7 +29,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
 
                     <div class="relative">
-                        <img src="{{ asset(asset('futech/assets/images/logo/Futech_Logo.png')) }}" class="w-full"
+                        <img src="{{ asset(asset('assets/images/logo/Futech_Logo.png')) }}" class="w-full"
                             alt="">
                     </div>
 
@@ -57,7 +57,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                             Lorem Ipsum.
                         </p>
                         <div>
-                            <img src="{{ asset(asset('futech/assets/images/icons/ux.svg')) }}" alt="">
+                            <img src="{{ asset(asset('assets/images/icons/ux.svg')) }}" alt="">
                             <span class="text-xl text-interface-100 font-medium">CEO &amp; Founder of QuomodoSoft</span>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                             Design</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/futech/assets/images/icons/ui.svg" alt="">
+                            <img src="http://futech.local/assets/images/icons/ui.svg" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             UI Design
@@ -108,7 +108,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                             Design</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/futech/assets/images/icons/ux.svg" alt="">
+                            <img src="http://futech.local/assets/images/icons/ux.svg" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             UX Design
@@ -135,7 +135,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                             Design</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/futech/assets/images/icons/pd.svg" alt="">
+                            <img src="http://futech.local/assets/images/icons/pd.svg" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             Product Design
@@ -162,7 +162,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                             Marketing</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/futech/assets/images/icons/mk.svg" alt="">
+                            <img src="http://futech.local/assets/images/icons/mk.svg" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             Digital Marketing
@@ -189,7 +189,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                             Writing</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/futech/assets/images/icons/cont.svg" alt="">
+                            <img src="http://futech.local/assets/images/icons/cont.svg" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             Content Writing
@@ -216,7 +216,7 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                             Specialist</span>
                         <div
                             class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/futech/assets/images/icons/search.svg" alt="">
+                            <img src="http://futech.local/assets/images/icons/search.svg" alt="">
                         </div>
                         <h3 class="text-2xl font-bold mb-3 text-interface-100">
                             SEO Specialist
@@ -255,20 +255,20 @@ background: url('{{ asset('futech/assets/images/bg/brcm.jpg') }}') no-repeat cen
                     <div class="lg:col-span-3 w-full">
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10">
                             <div>
-                                <img class="h-20 w-20" src="http://futech.local/futech/assets/images/clients/logo (1).png"
+                                <img class="h-20 w-20" src="http://futech.local/assets/images/clients/logo (1).png"
                                     alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full" src="http://futech.local/futech/assets/images/clients/logo.png"
+                                <img class="h-20 w-full" src="http://futech.local/assets/images/clients/logo.png"
                                     alt="">
                             </div>
                             <div>
                                 <img class="h-20 w-full"
-                                    src="http://futech.local/futech/assets/images/clients/QUEEN-PNG.png" alt="">
+                                    src="http://futech.local/assets/images/clients/QUEEN-PNG.png" alt="">
                             </div>
                             <div>
                                 <img class="h-20 w-full"
-                                    src="http://futech.local/futech/assets/images/clients/Royal-musk.png" alt="">
+                                    src="http://futech.local/assets/images/clients/Royal-musk.png" alt="">
                             </div>
                         </div>
                     </div>

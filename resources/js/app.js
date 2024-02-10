@@ -1,28 +1,32 @@
 //Vuetify Plugin Initiate
 import "vuetify/dist/vuetify.min.css";
 import "vue-snotify/styles/material.css";
-import "sweetalert2/dist/sweetalert2.min.css";
 import "verte/dist/verte.css";
 
 import Vue from "vue";
 
 // CKEditor
 import CKEditor from "ckeditor4-vue";
+
 //Jquery Initiate
 import JQuery from "jquery";
+
 //Verte
 import Verte from "verte";
+
 //Confirm Box
 import VueConfirmDialog from "vue-confirm-dialog";
+
 /*Vue Copy*/
 import ClickCopy from "vue-directive-copy";
 import VueNestable from "vue-nestable";
+
 //Vue Router Initiate
 import VueRouter from "vue-router";
+
 //Toaster Notify Plugin Initiate
 import Snotify from "vue-snotify";
-//Sweet Alert Initiate
-import VueSweetalert2 from "vue-sweetalert2";
+
 //Validation Plugin Initiate
 import Vuelidate from "vuelidate";
 import Vuetify from "vuetify";
@@ -50,12 +54,6 @@ Vue.use(Vuelidate)
 Vue.use(VueConfirmDialog)
 Vue.component('vue-confirm-dialog', VueConfirmDialog.default)
 
-const options = {
-    confirmButtonColor: '#41b882',
-    cancelButtonColor: '#ff7674',
-};
-Vue.use(VueSweetalert2, options);
-
 Vue.use(Snotify)
 
 Vue.component(Verte.name, Verte);
@@ -66,6 +64,7 @@ Vue.use(CKEditor);
 Vue.use(ClickCopy);
 
 Vue.use(VueNestable)
+
 
 //Admin Components
 Vue.component('AdminLogin', require('./components/views/admin/auth/AdminLogin').default);
@@ -117,31 +116,6 @@ Vue.component('Career', require('./components/views/admin/cms/career/Index').def
 Vue.component('CareerCreateOrEdit', require('./components/views/admin/cms/career/CreateAndUpdate').default);
 Vue.component('CareerApplication', require('./components/views/admin/cms/career/application/Index').default);
 
-
-/*User Register*/
-Vue.component('UserRegister', require('./components/views/front/registration/Register').default);
-Vue.component('UserEmailVerification', require('./components/views/front/registration/EmailVerification').default);
-Vue.component('UserResendEmailVerification', require('./components/views/front/registration/ResendEmailVerification').default);
-
-/*User login*/
-Vue.component('UserLogin', require('./components/views/front/auth/UserLogin').default);
-Vue.component('UserMfa', require('./components/views/front/auth/UserMfaVerification').default);
-// Vue.component('UserProfile', require('./components/views/front/my-profile/UserProfile').default);
-Vue.component('ForgotPassword', require('./components/views/front/auth/ForgotPassword').default);
-Vue.component('ResetPassword', require('./components/views/front/auth/ResetPassword').default);
-
-//Dashboard
-Vue.component('UserDashboard', require('./components/views/front/dashboard/Dashboard').default);
-
-//OfferProductService
-Vue.component('OfferingProductService', require('./components/views/front/offering-product/OfferingProductService').default);
-
-//Request
-Vue.component('Request', require('./components/views/front/request/Index').default);
-
-//Response
-Vue.component('RequestForPharmaceuticalCompany', require('./components/views/front/response/RequestForPharmaceuticalCompany').default);
-
 // Contact Us
 Vue.component('ContactUs', require('./components/views/front/contact-us/ContactUs').default);
 
@@ -154,34 +128,7 @@ Vue.component('Careers',require('./components/views/front/career/career').defaul
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-
-const routes = [
-    {path: '', component: router},
-]
-const router = new VueRouter({
-    mode: 'history',
-    routes // short for `routes: routes`
-
-})
-
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
 new Vue({
     vuetify : new Vuetify(),
     el: '#app',
-    router,
-    components: {
-        // Searchbar
-    }
 });
-
-// /*For localisation*/
-// import Lang from  la
-// const default_locale = window.default_locale;
-// const fallback_locale = window.fallback_locale;
-// const messages = window.messages;
