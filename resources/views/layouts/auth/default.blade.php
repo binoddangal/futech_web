@@ -24,12 +24,12 @@
             <!--end::Body-->
             <!--begin::Aside-->
             <div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2"
-                style="background: #282973;">
+                style="background: #000000;">
                 <!--begin::Content-->
                 <div class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100">
                     <!--begin::Logo-->
                     <a href="#" class="mb-0 mb-lg-12">
-                        <img alt="Logo" src="{{ asset('futech/images/footer.jpg') }}" class="h-60px h-lg-75px" />
+                        <img alt="Logo" src="{{ asset('assets/images/logo/Futech_LogoWhite.png') }}" class="h-60px h-lg-75px" />
                     </a>
                     <!--end::Logo-->
                     <!--begin::Image-->

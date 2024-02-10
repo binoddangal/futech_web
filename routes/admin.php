@@ -42,14 +42,14 @@ Route::group(['middleware' => ['admin'], 'prefix' => 'admin'], function ($router
     $router->post('admin-user/deactivate/email-authenticator', [\App\Http\Controllers\Admin\Auth\MFAController::class, 'deactivateEmailAuthenticator']);
 
     // User
-    $router->get('user/{status}', [\App\Http\Controllers\Admin\User\UserController::class, 'indexView'])->name('admin.user.indexView');
-    $router->resource('user', \App\Http\Controllers\Admin\User\UserController::class);
-    $router->post('user/{id}/approved-or-rejected', [ \App\Http\Controllers\Admin\User\UserController::class, 'approvedOrRejectedUser']);
-    $router->get('user/export/volunteer', [ \App\Http\Controllers\Admin\User\UserController::class, 'exportVolunteer']);
+    // $router->get('user/{status}', [\App\Http\Controllers\Admin\User\UserController::class, 'indexView'])->name('admin.user.indexView');
+    // $router->resource('user', \App\Http\Controllers\Admin\User\UserController::class);
+    // $router->post('user/{id}/approved-or-rejected', [ \App\Http\Controllers\Admin\User\UserController::class, 'approvedOrRejectedUser']);
+    // $router->get('user/export/volunteer', [ \App\Http\Controllers\Admin\User\UserController::class, 'exportVolunteer']);
 
     // User Setting
-    $router->post('user-setting/{userId}', [\App\Http\Controllers\Admin\User\Setting\UserSettingController::class, 'createOrUpdate']);
-    $router->get('user-setting/{userId}', [\App\Http\Controllers\Admin\User\Setting\UserSettingController::class, 'show']);
+    // $router->post('user-setting/{userId}', [\App\Http\Controllers\Admin\User\Setting\UserSettingController::class, 'createOrUpdate']);
+    // $router->get('user-setting/{userId}', [\App\Http\Controllers\Admin\User\Setting\UserSettingController::class, 'show']);
 
     //Email template
     $router->get('email-templates-roles', [\App\Http\Controllers\Admin\EmailTemplate\EmailTemplateController::class, 'roleView'])->name('admin.email-template-role.indexView');

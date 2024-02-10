@@ -101,14 +101,19 @@ th {
     background: white !important;
 }
 
+.black{
+    background-color: #000000 !important;
+    color: #fff !important;
+}
+
 .btn-primary i {
     color: #fff !important;
     margin-right: 5px;
 }
 
 .btn-primary {
-    background-color: #282973 !important;
-    border-color: #282973 !important;
+    background-color: #000000 !important;
+    border-color: #000000 !important;
     color: #fff !important;
     font-size: .90rem !important;
 }
@@ -181,7 +186,7 @@ th {
 }
 
 [data-kt-app-layout="dark-sidebar"] .app-sidebar {
-    background-color: #282973 !important;
+    background-color: #000000 !important;
 }
 
 .app-sidebar .menu .menu-item .menu-link .menu-title {

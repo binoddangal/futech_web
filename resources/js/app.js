@@ -54,12 +54,6 @@ Vue.use(Vuelidate)
 Vue.use(VueConfirmDialog)
 Vue.component('vue-confirm-dialog', VueConfirmDialog.default)
 
-const options = {
-    confirmButtonColor: '#41b882',
-    cancelButtonColor: '#ff7674',
-};
-Vue.use(VueSweetalert2, options);
-
 Vue.use(Snotify)
 
 Vue.component(Verte.name, Verte);
@@ -137,8 +131,4 @@ Vue.component('Careers',require('./components/views/front/career/career').defaul
 new Vue({
     vuetify : new Vuetify(),
     el: '#app',
-    router,
-    components: {
-        // Searchbar
-    }
 });

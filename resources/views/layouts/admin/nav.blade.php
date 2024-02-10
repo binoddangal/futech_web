@@ -370,10 +370,10 @@
                     <!--begin::Logo image-->
                     <a href="{{url('/')}}">
                         @if (!empty(getAdminLogo()))
-                                <img src="{{ getAdminLogo()}}" alt="futech Logo" class="h-65px app-sidebar-logo-default">
+                                <img src="{{ getAdminLogo()}}" alt="Futech Logo" class="h-65px app-sidebar-logo-default">
                             @else
-                                <img alt="futech" src="{{asset('futech/images/Logo.png')}}" class="h-20px app-sidebar-logo-default" />
-                                <img alt="futech" src="{{asset('futech/images/Logo.png')}}" class="h-20px app-sidebar-logo-minimize" />
+                                <img alt="futech" src="{{asset('assets/images/logo/Futech_Logo.png')}}" class="h-20px app-sidebar-logo-default" />
+                                <img alt="futech" src="{{asset('assets/images/logo/Futech_Logo.png')}}" class="h-20px app-sidebar-logo-minimize" />
                                 @endif
                     </a>
                     <!--end::Logo image-->
@@ -561,18 +561,18 @@
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
-                          {{--  <div class="menu-item here">
+                           <div class="menu-item here">
                                 <a class="menu-link {{ request()->is('admin/our-project*') ? 'active' : '' }}" href="{{ route('admin.our-project.index') }}">
                                     <span class="menu-icon">
                                         <i class="fas fa-bars"></i>
                                     </span>
-                                    <span class="menu-title">Our Project</span>
+                                    <span class="menu-title">Our services</span>
                                 </a>
-                            </div> --}}
+                            </div>
                             <!--end:Menu link-->
 
                             <!--begin:Menu item-->
-                           {{-- <div class="menu-item here">
+                            <div class="menu-item here">
                                 <!--begin:Menu link-->
                                 <a class="menu-link {{ request()->is('admin/partner*') ? 'active' : '' }}" href="{{ route('admin.partner.indexView') }}">
                                     <span class="menu-icon">
@@ -580,13 +580,13 @@
                                         <i class="fas fa-bars"></i>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    <span class="menu-title">Our Partner</span>
+                                    <span class="menu-title">Our client</span>
                                 </a>
-                            </div> --}}
+                            </div>
                             <!--end:Menu link-->
 
                             <!--begin:Menu item-->
-                          {{--  <div class="menu-item here">
+                          <div class="menu-item here">
                                 <!--begin:Menu link-->
                                 <a class="menu-link {{ request()->is('admin/blogs*') ? 'active' : '' }}" href="{{route('admin.blog.indexView')}}">
 											<span class="menu-icon">
@@ -597,11 +597,11 @@
                                     <span class="menu-title">Blogs</span>
                                 </a>
                                 <!--end:Menu link-->
-                            </div> --}}
+                            </div>
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
-                         {{--   <div class="menu-item here">
+                         <div class="menu-item here">
                                 <!--begin:Menu link-->
                                 <a class="menu-link {{ request()->is('admin/news-and-updates*') ? 'active' : '' }}" href="{{route('admin.indexNewAndUpdate')}}">
 											<span class="menu-icon">
@@ -612,7 +612,7 @@
                                     <span class="menu-title">News and updates</span>
                                 </a>
                                 <!--end:Menu link-->
-                            </div> --}}
+                            </div>
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
@@ -722,7 +722,7 @@
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
-                          {{--  <div class="menu-item here">
+                           <div class="menu-item here">
                                 <!--begin:Menu link-->
                                 <a class="menu-link {{ request()->is('admin/contact-us*') ? 'active' : '' }}" href="{{ route('admin.contact.indexView') }}">
                                     <span class="menu-icon">
@@ -733,7 +733,7 @@
                                     <span class="menu-title">Online enquiry</span>
                                 </a>
                                 <!--end:Menu link-->
-                            </div> --}}
+                            </div>
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
@@ -767,7 +767,7 @@
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
-                           {{-- <div class="menu-item here">
+                            <div class="menu-item here">
                                 <!--begin:Menu link-->
                                 <a class="menu-link {{ request()->is('admin/faq*') ? 'active' : '' }}" href="{{ route('admin.faq.indexView') }}">
 											<span class="menu-icon">
@@ -778,11 +778,11 @@
 											<span class="menu-title">FAQs</span>
 										</a>
                                 <!--end:Menu link-->
-                            </div> --}}
+                            </div>
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
-                           {{-- <div class="menu-item here">
+                            <div class="menu-item here">
                                 <!--begin:Menu link-->
                                 <a class="menu-link {{ request()->is('admin/popup*') ? 'active' : '' }}" href="{{ route('admin.popup.indexView') }}">
 											<span class="menu-icon">
@@ -793,7 +793,7 @@
 											<span class="menu-title">Popups</span>
 										</a>
                                 <!--end:Menu link-->
-                            </div> --}}
+                            </div>
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
@@ -827,7 +827,7 @@
                             <!--end:Menu item-->
 
                             <!--begin:Menu item-->
-                          {{--  <div class="menu-item here">
+                           <div class="menu-item here">
                                 <!--begin:Menu link-->
                                 <a class="menu-link {{ request()->is('admin/careers*') ? 'active' : '' }}" href="{{ route('admin.career.indexView') }}">
 											<span class="menu-icon">
@@ -838,7 +838,7 @@
                                     <span class="menu-title">Career</span>
                                 </a>
                                 <!--end:Menu link-->
-                            </div> --}}
+                            </div>
                             <!--end:Menu item-->
                            {{-- <div class="menu-item here">
                                 <!--begin:Menu link-->

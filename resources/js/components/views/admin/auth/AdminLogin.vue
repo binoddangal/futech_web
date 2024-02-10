@@ -49,7 +49,8 @@
               <div class="text-right w-full flex-col">
                 <v-btn
                   v-if="!accountNotVerified"
-                  color="primary"
+                  class="text-white"
+                  color="black"
                   :loading="loading"
                   @click="proceedLogin"
                 >
