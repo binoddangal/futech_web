@@ -36,7 +36,7 @@
                         <div class="flex items-center mt-5">
 
                             <div class="text-left w-1/2 flex-col justify-content-center">
-                            <a href="/forgot-password" class="font-medium yelko__text-blue hover:text-indigo-500">
+                            <a href="/forgot-password" class="font-medium futech__text-blue hover:text-indigo-500">
                                 Forgot password?
                             </a>
                         </div>

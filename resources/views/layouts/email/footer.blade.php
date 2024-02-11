@@ -39,7 +39,7 @@
                 </td>
                 <td width="80%" style="margin-top: 4px soli #fff;">
                     <p style="text-align:center; color: #000000;"> {{ date('Y') }} &copy; All rights reserved
-                        <br/>Powered by <a href="https://yelko.com" style="color: #000000;" target="_blank" class="text-white">Yelko</a>
+                        <br/>Powered by <a href="https://futech.com" style="color: #000000;" target="_blank" class="text-white">futech</a>
                     </p>
                 </td>
             </tr>

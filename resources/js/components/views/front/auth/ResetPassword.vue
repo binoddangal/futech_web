@@ -7,7 +7,7 @@
                 </h2>
             </div>
 
-            <div class="mt-8 sm:mx-auto sm:w-full yelko__max-w-450">
+            <div class="mt-8 sm:mx-auto sm:w-full futech__max-w-450">
                 <div class="bg-white sm:px-10">
                     <div>
                             <v-text-field
@@ -44,7 +44,7 @@
                         <div class="flex">
 
                             <div class="text-left w-1/2 flex-col justify-content-center">
-                                <a  :href="getSignInPageUrl()" class="font-medium yelko__text-blue hover:text-indigo-500">
+                                <a  :href="getSignInPageUrl()" class="font-medium futech__text-blue hover:text-indigo-500">
                                     Remember Password? Sign in
                                 </a>
                             </div>

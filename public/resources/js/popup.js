@@ -21,11 +21,11 @@ function popup_modalTogglerFunction(modal) {
         closeBtn[i].addEventListener('click', function (e) {
             e.preventDefault();
             let modalWrapper = document.querySelector(this.getAttribute('data-target'));
-            modalWrapper.classList.remove('yelko__modal--show')
+            modalWrapper.classList.remove('futech__modal--show')
             modalWrapper.addEventListener('click', function (event) {
                 if (
-                    event.target.matches('yelko__modal__closebtn') ||
-                    !event.target.closest(".yelko__modal__content")
+                    event.target.matches('futech__modal__closebtn') ||
+                    !event.target.closest(".futech__modal__content")
                 ) {
                     closeModal(modalWrapper)
                 }
@@ -36,18 +36,18 @@ function popup_modalTogglerFunction(modal) {
 
 function closeModal(modalWrapper) {
     // console.log('check it working')
-    document.querySelector('body').classList.remove('yelko__show-modal');
-    modalWrapper.classList.remove('yelko__modal--show')
+    document.querySelector('body').classList.remove('futech__show-modal');
+    modalWrapper.classList.remove('futech__modal--show')
 }
 
 function showModal(modalWrapper) {
     // console.log('check it working')
-    document.querySelector('body').classList.add('yelko__show-modal');
-    modalWrapper.classList.add('yelko__modal--show')
+    document.querySelector('body').classList.add('futech__show-modal');
+    modalWrapper.classList.add('futech__modal--show')
 }
 
-function yelko__modalTogglerFunction(btnId) {
-    // let modalToggleBtn = document.querySelectorAll('.yelko__modal-toggle-btn');
+function futech__modalTogglerFunction(btnId) {
+    // let modalToggleBtn = document.querySelectorAll('.futech__modal-toggle-btn');
     // console.log(btnId)
     let modalToggleBtn = btnId
     let id = modalToggleBtn.getAttribute('data-target');
@@ -61,13 +61,13 @@ function yelko__modalTogglerFunction(btnId) {
     //     id = btn.dataset.target;
     //     modalWrapper = document.querySelector(id);
     //     btn.addEventListener('click', function () {
-    //         document.querySelector('body').classList.add('yelko__show-modal');
-    //         modalWrapper.classList.add('yelko__modal--show');
+    //         document.querySelector('body').classList.add('futech__show-modal');
+    //         modalWrapper.classList.add('futech__modal--show');
     //     })
     // })
 
     // modalWrapper = document.querySelector(id);
-    let closeBtn = modalWrapper.querySelector('.yelko__modal__closebtn')
+    let closeBtn = modalWrapper.querySelector('.futech__modal__closebtn')
 
     closeBtn.addEventListener('click', function () {
         closeModal(modalWrapper)
@@ -77,8 +77,8 @@ function yelko__modalTogglerFunction(btnId) {
 
     modalWrapper.addEventListener('click', function (event) {
         if (
-            event.target.matches('yelko__modal__closebtn') ||
-            !event.target.closest(".yelko__modal__content")
+            event.target.matches('futech__modal__closebtn') ||
+            !event.target.closest(".futech__modal__content")
         ) {
             closeModal(modalWrapper)
         }

@@ -18,7 +18,7 @@
         <!--begin::Copyright-->
         <div class="text-dark order-2 order-md-1">
             <span class="text-muted fw-semibold me-1">{{date('Y')}}&copy; futech</span>
-            <a href="https://yelko.com" target="_blank" class="text-gray-800 text-hover-primary">Powered by Yelko</a>
+            <a href="https://futechnepal.com/" target="_blank" class="text-gray-800 text-hover-primary">Powered by Futech</a>
         </div>
         <!--end::Copyright-->
     </div>

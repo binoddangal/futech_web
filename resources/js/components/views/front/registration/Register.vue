@@ -2,7 +2,7 @@
     <div>
         <v-app>
             <div class="center-login-wrapper mx-auto text-center">
-                <div class="sm:mx-auto sm:w-full yelko__max-w-650">
+                <div class="sm:mx-auto sm:w-full futech__max-w-650">
                     <div class="bg-white sm:px-10">
                         <v-row>
 
