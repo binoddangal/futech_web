@@ -148,20 +148,6 @@ Route::group(['middleware' => ['admin'], 'prefix' => 'admin'], function ($router
     $router->post('team/{id}', [\App\Http\Controllers\Admin\Cms\Team\TeamController::class, 'update']);
     $router->post('team/get/sort', [\App\Http\Controllers\Admin\Cms\Team\TeamController::class, 'sort']);
 
-    /*Category */
-    $router->get('categories', [\App\Http\Controllers\Admin\Category\CategoryController::class,'indexView'])->name('admin.categories.indexView');
-    $router->resource('category', \App\Http\Controllers\Admin\Category\CategoryController::class);
-    $router->get('category/get/all', [\App\Http\Controllers\Admin\Category\CategoryController::class, 'all']);
-
-    /*Sub Category */
-    $router->get('sub-categories', [\App\Http\Controllers\Admin\Category\SubCategory\SubCategoryController::class,'indexView'])->name('admin.sub-categories.indexView');
-    $router->resource('sub-category', \App\Http\Controllers\Admin\Category\SubCategory\SubCategoryController::class);
-    $router->get('sub-category/get/all', [\App\Http\Controllers\Admin\Category\SubCategory\SubCategoryController::class, 'all']);
-
-    /*Item */
-    $router->get('items', [\App\Http\Controllers\Admin\Category\SubCategory\Item\ItemController::class,'indexView'])->name('admin.items.indexView');
-    $router->resource('item', \App\Http\Controllers\Admin\Category\SubCategory\Item\ItemController::class);
-
     /*Download Category */
     $router->get('download/type', [\App\Http\Controllers\Admin\Cms\Download\Type\DownloadTypeController::class, 'indexView'])->name('admin.download-type.indexView');
     $router->resource('download-type', \App\Http\Controllers\Admin\Cms\Download\Type\DownloadTypeController::class);

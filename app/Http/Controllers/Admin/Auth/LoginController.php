@@ -36,8 +36,6 @@ class LoginController extends Controller
         }
     }
 
-
-
     public function login(Request $request)
     {
         if ($this->attemptLogin($request)) {
