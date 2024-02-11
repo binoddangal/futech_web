@@ -340,7 +340,7 @@ function getFavIcon()
 
     $site_settings = SiteSetting::first();
 
-    return !empty($site_settings) && !empty($site_settings->fav_icon) ? $site_settings->fav_icon_path['real'] : asset('futech/images/logoicon.png');
+    return !empty($site_settings) && !empty($site_settings->fav_icon) ? $site_settings->fav_icon_path['real'] : asset('assets/images/logo/Futech_Logo.png');
 
 }
 
@@ -348,16 +348,16 @@ function getLogo($footer=false)
 {
     $site_settings = SiteSetting::first();
     if($footer){
-        return !empty($site_settings) && !empty($site_settings->footer_logo) ? $site_settings->footer_logo_path['real'] : asset('futech/images/Logo.png');
+        return !empty($site_settings) && !empty($site_settings->footer_logo) ? $site_settings->footer_logo_path['real'] : asset('assets/images/logo/Futech_LogoWhite.png');
     }
-    return !empty($site_settings->logo) ? $site_settings->logo_path['real'] : asset('futech/images/Logo.png');
+    return !empty($site_settings->logo) ? $site_settings->logo_path['real'] : asset('assets/images/logo/Futech_Logo.png');
 }
 
 function getAdminLogo($footer=false)
 {
     $site_settings = SiteSetting::first();
 
-    return !empty($site_settings->app_logo) ? $site_settings->app_logo_path['real'] : asset('futech/images/Logo.png');
+    return !empty($site_settings->app_logo) ? $site_settings->app_logo_path['real'] : asset('assets/images/logo/Futech_LogoWhite.png');
 }
 
 function getAllLogs($userId, $applicationId = null, $agentId = null)
