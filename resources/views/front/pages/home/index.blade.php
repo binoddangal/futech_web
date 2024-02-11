@@ -13,34 +13,15 @@ center/cover;
                         <h1 class="text-5xl xl:text-6xl mb-3 xl:leading-snug font-bold text-white">
                             The Future <br />
                             Belongs to Those
-                            <span class="relative"
-                                style="
-background: url('assets/images/shape/line-t.svg') no-repeat bottom;
-  ">who
-                                Learn </span>
                         </h1>
                         <p class="text-borderl-500 lg:text-xl text-lg xl:text-2xl mt-4 mb-8">
                             Guiding students to discover their unique talents <br />
                             and find to make strengths.
                         </p>
-                        <div class="hidden xl:block">
-                            <img src="assets/images/shape/o-arr.svg" class="absolute bottom-28 -left-36" alt />
-                        </div>
                     </div>
                     <div class="lg:w-1/2 order-1 lg:order-2">
                         <div class="relative ">
                             <img src="{{ asset('assets/images/person.png') }}" alt />
-                            <ul class="hidden xl:block">
-                                <li class="absolute -left-20 top-52">
-                                    <img src="assets/images/hero/hero-two/sh-1.png" alt />
-                                </li>
-                                <li class="absolute -right-10 top-48">
-                                    <img src="assets/images/hero/hero-two/sh-2.png" alt />
-                                </li>
-                                <li class="absolute bottom-20 -right-10">
-                                    <img src="assets/images/hero/hero-two/sh-3.png" alt />
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
