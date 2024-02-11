@@ -27,9 +27,9 @@ class AdminUserResource extends JsonResource
             'address' => $this->address,
             'user_type' => $this->user_type,
             'user_type_text' => ucwords($this->user_type),
-            'is_mfa_enabled' => $this->is_mfa_enabled,
-            'is_email_authentication_enabled' => $this->is_email_authentication_enabled,
-            'is_active' => $this->is_active,
+            'is_mfa_enabled' => $this->is_mfa_enabled ? true : false,
+            'is_email_authentication_enabled' => $this->is_email_authentication_enabled ? true : false,
+            'is_active' => $this->is_active  ? true : false,
         ];
 
         if($request->route()->getName() == 'admin-user.user-type') {
@@ -45,7 +45,7 @@ class AdminUserResource extends JsonResource
                 'username' => $this->username,
                 'email' => $this->email,
                 'user_type_text' => ucwords($this->user_type),
-                'is_active' => $this->is_active,
+                'is_active' => $this->is_active ? true : false,
             ];
         }
 

@@ -359,31 +359,31 @@ h4 {
     margin-right: 15px;
 }
 
-.yelko__home .yelko__video-post article h2.yelko__flex {
+.futech__home .futech__video-post article h2.futech__flex {
     line-height: 1.1;
 }
 
-.yelko__home .yelko__video-post article h2.yelko__flex+span {
+.futech__home .futech__video-post article h2.futech__flex+span {
     font-size: 36px;
     line-height: 1.1;
 }
 
-.yelko__home .yelko__video-post article h2.yelko__flex+span+p {
+.futech__home .futech__video-post article h2.futech__flex+span+p {
     line-height: 1.1;
     font-size: 16px;
 }
 
 @media screen and (max-width: 991px) {
-    .yelko__home .yelko__video-post article h2.yelko__flex+span {
+    .futech__home .futech__video-post article h2.futech__flex+span {
         font-size: 1.8rem;
     }
 }
 
-.yelko__home .yelko__video-post .yelko__offgrid-right {
+.futech__home .futech__video-post .futech__offgrid-right {
     position: relative;
 }
 
-.yelko__home .yelko__video-post .yelko__offgrid-right:after {
+.futech__home .futech__video-post .futech__offgrid-right:after {
     content: '';
     position: absolute;
     z-index: 1;
@@ -395,27 +395,27 @@ h4 {
     opacity: 0.2;
 }
 
-.yelko__home .yelko__video-post .yelko__offgrid-right>img {
+.futech__home .futech__video-post .futech__offgrid-right>img {
     position: relative;
     z-index: 1;
     display: block;
 }
 
-.yelko__home .yelko__video-post .yelko__offgrid-right article {
+.futech__home .futech__video-post .futech__offgrid-right article {
     z-index: 3;
 }
 
-.yelko__home .yelko__video-post .yelko__offgrid-right article button.yelko__button--reset {
+.futech__home .futech__video-post .futech__offgrid-right article button.futech__button--reset {
     margin-left: 2.5rem;
 }
 
-.yelko__home .yelko__video-post .yelko__offgrid-right article img {
+.futech__home .futech__video-post .futech__offgrid-right article img {
     max-width: 70px;
     max-height: 70px;
 }
 
 @media screen and (max-width: 991px) {
-    .yelko__home .yelko__video-post .yelko__offgrid-right article {
+    .futech__home .futech__video-post .futech__offgrid-right article {
         margin-top: 0;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -428,19 +428,19 @@ h4 {
         transform: translateX(-50%) translateY(-50%);
     }
 
-    .yelko__home .yelko__video-post .yelko__offgrid-right article button {
+    .futech__home .futech__video-post .futech__offgrid-right article button {
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1;
         margin-left: 0 !important;
     }
 
-    .yelko__home .yelko__video-post .yelko__offgrid-right article img {
+    .futech__home .futech__video-post .futech__offgrid-right article img {
         max-width: 50px;
         max-height: 50px;
     }
 
-    .yelko__home .yelko__video-post .yelko__offgrid-right article h2 {
+    .futech__home .futech__video-post .futech__offgrid-right article h2 {
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
         order: 2;
@@ -449,8 +449,8 @@ h4 {
 
 @media screen and (min-width: 992px) {
 
-    .yelko__home .yelko__video-post .yelko__offgrid-right>img,
-    .yelko__home .yelko__video-post .yelko__offgrid-right:after {
+    .futech__home .futech__video-post .futech__offgrid-right>img,
+    .futech__home .futech__video-post .futech__offgrid-right:after {
         border-radius: 12% / 20%;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
@@ -458,33 +458,33 @@ h4 {
 }
 
 @media screen and (min-width: 1200px) {
-    .yelko__home .yelko__video-post .yelko__offgrid-right img {
+    .futech__home .futech__video-post .futech__offgrid-right img {
         -o-object-fit: cover;
         object-fit: cover;
         width: 100%;
     }
 }
 
-.yelko__home .yelko__video-post article h2.yelko__flex {
+.futech__home .futech__video-post article h2.futech__flex {
     margin-bottom: 5px;
 }
 
-.yelko__home .yelko__video-post article h2.yelko__flex img {
+.futech__home .futech__video-post article h2.futech__flex img {
     width: 38px;
     height: 40px;
     margin-right: 15px;
 }
 
-.yelko__home .yelko__video-post article h2.yelko__flex+span {
+.futech__home .futech__video-post article h2.futech__flex+span {
     display: block;
 }
 
-.yelko__home .yelko__video-post article h2.yelko__flex+span,
-.yelko__home .yelko__video-post article h2.yelko__flex+span+p {
+.futech__home .futech__video-post article h2.futech__flex+span,
+.futech__home .futech__video-post article h2.futech__flex+span+p {
     margin-bottom: 2rem;
 }
 
-.yelko__home .yelko__video-post article h2.yelko__flex+span+p+.yelko__btn {
+.futech__home .futech__video-post article h2.futech__flex+span+p+.futech__btn {
     width: 100%;
     max-width: 419px;
     margin-top: 1rem;
@@ -492,13 +492,13 @@ h4 {
 }
 
 @media screen and (max-width: 991px) {
-    .yelko__home .yelko__video-post article {
+    .futech__home .futech__video-post article {
         padding: 0 15px 30px;
         margin-top: 2rem;
         text-align: center;
     }
 
-    .yelko__home .yelko__video-post article .yelko__flex {
+    .futech__home .futech__video-post article .futech__flex {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
@@ -506,7 +506,7 @@ h4 {
 }
 
 @media screen and (max-width: 767px) {
-    .yelko__home .yelko__video-post article h2.yelko__flex {
+    .futech__home .futech__video-post article h2.futech__flex {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -514,15 +514,15 @@ h4 {
     }
 }
 
-.yelko__home .yelko__two-column-post {
+.futech__home .futech__two-column-post {
     padding-top: 0;
 }
 
-.yelko__home .yelko__two-column-post h2 {
+.futech__home .futech__two-column-post h2 {
     margin-bottom: 2rem;
 }
 
-.yelko__home .yelko__two-column-post select {
+.futech__home .futech__two-column-post select {
     border: none;
     background-color: transparent;
     padding-left: 30px;
@@ -533,74 +533,74 @@ h4 {
 }
 
 @media screen and (max-width: 991px) {
-    .yelko__home .yelko__two-column-post article {
+    .futech__home .futech__two-column-post article {
         padding: 0 15px 30px;
         max-width: 480px;
         margin: 0 auto;
     }
 }
 
-.yelko__home .yelko__card-list .yelko__section-title {
+.futech__home .futech__card-list .futech__section-title {
     margin-bottom: 4rem;
 }
 
 @media screen and (max-width: 768px) {
-    .yelko__home .yelko__card-list .row>*+* {
+    .futech__home .futech__card-list .row>*+* {
         margin-top: 1.5rem;
     }
 }
 
-.yelko__home .yelko__card-list .yelko__section-title {
+.futech__home .futech__card-list .futech__section-title {
     font-size: 24px;
     font-family: 'Chronicle Text G1';
 }
 
 @media screen and (max-width: 991px) {
-    .yelko__home .yelko__video-post article h2.yelko__flex+span {
+    .futech__home .futech__video-post article h2.futech__flex+span {
         font-size: 1.8rem;
     }
 }
 
-.yelko__section {
+.futech__section {
     padding: 50px 0;
 }
 
 @media screen and (min-width: 992px) {
-    .yelko__section {
+    .futech__section {
         padding: 100px 0;
     }
 
-    .yelko__section--lg {
+    .futech__section--lg {
         padding: 140px 0;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .yelko__footer {
+    .futech__footer {
         padding: 3rem 0 !important;
     }
 
-    .yelko__footer .yelko__container {
+    .futech__footer .futech__container {
         padding: 0 30px;
     }
 
-    .yelko__footer .col--12-of-12+* .yelko__footer__list-box {
+    .futech__footer .col--12-of-12+* .futech__footer__list-box {
         padding-top: 15px;
         margin-top: 15px;
         border-top: 1px solid var(--clr__white-dim-25);
     }
 
-    .yelko__footer .col--12-of-12:nth-child(6) .yelko__footer__list-box {
+    .futech__footer .col--12-of-12:nth-child(6) .futech__footer__list-box {
         padding-bottom: 15px;
         margin-bottom: 15px;
         border-bottom: 1px solid var(--clr__white-dim-25);
     }
 
-    .yelko__footer .yelko__footer__list-box .row {
+    .futech__footer .futech__footer__list-box .row {
         display: none;
     }
 
-    .yelko__footer .yelko__footer__list-box h5 {
+    .futech__footer .futech__footer__list-box h5 {
         margin-bottom: 0;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -615,49 +615,49 @@ h4 {
         justify-content: space-between;
     }
 
-    .yelko__footer .yelko__footer__list-box h5 .mdi {
+    .futech__footer .futech__footer__list-box h5 .mdi {
         cursor: pointer;
     }
 
-    .yelko__footer .yelko__footer__list-box>ul {
+    .futech__footer .futech__footer__list-box>ul {
         display: none;
         margin-top: 12px;
     }
 
-    .yelko__footer .yelko__footer__list-box.show-widget-content>ul {
+    .futech__footer .futech__footer__list-box.show-widget-content>ul {
         display: block;
     }
 }
 
-.yelko__container {
+.futech__container {
     width: 100%;
     max-width: 1185px;
 }
 
-.yelko__container--fluid {
+.futech__container--fluid {
     width: 100%;
     max-width: 1440px;
 }
 
-.yelko--mx-auto,
-.yelko__header .yelko__nav-toggle-btn .yelko--line,
-.yelko__container,
-.yelko__container--fluid {
+.futech--mx-auto,
+.futech__header .futech__nav-toggle-btn .futech--line,
+.futech__container,
+.futech__container--fluid {
     margin-left: auto;
     margin-right: auto;
 }
 
 @media screen and (max-width: 767px) {
-    .yelko__container {
+    .futech__container {
         padding: 0 15px;
     }
 }
 
-.yelko__modal .yelko__responsive--aspect-ratio {
+.futech__modal .futech__responsive--aspect-ratio {
     margin: 3rem auto 0;
 }
 
-.yelko__modal {
+.futech__modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -675,7 +675,7 @@ h4 {
     transition: all 500ms ease-in-out 500ms;
 }
 
-.yelko__show-modal .yelko__modal.yelko__modal--show {
+.futech__show-modal .futech__modal.futech__modal--show {
     opacity: 1;
     visibility: visible;
     height: 100vh;
@@ -684,7 +684,7 @@ h4 {
     z-index: 10000;
 }
 
-.yelko__show-modal .yelko__modal.yelko__modal--show .yelko__modal__content {
+.futech__show-modal .futech__modal.futech__modal--show .futech__modal__content {
     opacity: 1;
     visibility: visible;
     margin-top: 0;
@@ -692,21 +692,21 @@ h4 {
     transition: all 1000ms ease-in-out 500ms;
 }
 
-.yelko__modal--mx-w-40 .yelko__modal__content {
+.futech__modal--mx-w-40 .futech__modal__content {
     max-width: 40%;
 }
 
-.yelko__bg-white,
-.yelko__responsive--aspect-ratio iframe,
-.yelko__responsive--aspect-ratio img,
-.yelko__responsive--aspect-ratio video,
-.yelko__responsive--aspect-ratio object,
-.yelko__modal__content {
+.futech__bg-white,
+.futech__responsive--aspect-ratio iframe,
+.futech__responsive--aspect-ratio img,
+.futech__responsive--aspect-ratio video,
+.futech__responsive--aspect-ratio object,
+.futech__modal__content {
     background-color: var(--clr__white);
 }
 
 .content-center-both,
-.yelko__modal__content {
+.futech__modal__content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -714,7 +714,7 @@ h4 {
     transform: translate(-50%, -50%);
 }
 
-.yelko__modal__content {
+.futech__modal__content {
     cursor: default;
     position: absolute;
     border-radius: 30px;
@@ -731,37 +731,37 @@ h4 {
 }
 
 @media screen and (max-width: 991px) {
-    .yelko__modal__content {
+    .futech__modal__content {
         max-width: 90%;
     }
 }
 
 @media screen and (max-width: 1199px) and (orientation: landscape) {
-    .yelko__modal__content .yelko__responsive--aspect-ratio {
+    .futech__modal__content .futech__responsive--aspect-ratio {
         padding-top: 31.66666666666667%;
         margin-top: 2rem;
     }
 
-    .yelko__modal__content .yelko__responsive--aspect-ratio iframe {
+    .futech__modal__content .futech__responsive--aspect-ratio iframe {
         border-radius: 25px;
     }
 
-    .yelko__modal__content .yelko__modal__closebtn {
+    .futech__modal__content .futech__modal__closebtn {
         top: auto;
     }
 }
 
-.yelko__modal__card__header-title {
+.futech__modal__card__header-title {
     font-size: 24px;
 }
 
-.yelko__text-black,
-.yelko__header .yelko__btn--light-green,
-.yelko__modal__closebtn {
+.futech__text-black,
+.futech__header .futech__btn--light-green,
+.futech__modal__closebtn {
     color: var(--clr__black) !important;
 }
 
-.yelko__modal__closebtn {
+.futech__modal__closebtn {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -770,7 +770,7 @@ h4 {
     top: 12px;
 }
 
-.yelko__modal__closebtn .mdi:before {
+.futech__modal__closebtn .mdi:before {
     font-size: 3rem;
 }
 

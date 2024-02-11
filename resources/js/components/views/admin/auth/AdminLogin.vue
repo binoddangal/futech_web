@@ -108,7 +108,7 @@
           <div class="mt-5">
             <div class="bg-white text-center">
               <img
-                src="/assets/image/mfa_verification.png"
+                src="/assets/images/mfa_verification.png"
                 class="w-64"
                 style="margin: 0 auto"
               />
@@ -145,7 +145,7 @@
               </div>
               <div class="mt-8">
                 Lost your mobile device ?
-                <v-btn class="ml-2 link" @click="recoverAccount"
+                <v-btn class="black text-white ml-2 link" @click="recoverAccount"
                   >Recover Account</v-btn
                 >
               </div>

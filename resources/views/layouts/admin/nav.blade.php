@@ -40,10 +40,10 @@
 							     <div class="menu menu-rounded menu-column menu-lg-row my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0" id="kt_app_header_menu" data-kt-menu="true">
 
 									<!--begin:Menu item-->
-									<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
+									{{-- <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion me-0 me-lg-2">
 										<!--begin:Menu link-->
 										<span class="menu-link">
-											<span class="menu-title">Cms</span>
+											<span class="menu-title">CMS</span>
 											<span class="menu-arrow d-lg-none"></span>
 										</span>
 										<!--end:Menu link-->
@@ -215,7 +215,7 @@
 											<!--end:Pages menu-->
 										</div>
 										<!--end:Menu sub-->
-									</div>
+									</div> --}}
 									<!--end:Menu item-->
 
 								</div>
@@ -286,7 +286,7 @@
                                         @if (auth()->user()->image_path)
                                             <img src="{{ auth()->user()->image_path['real'] }}" alt="user" />
                                         @else
-                                            <img src="https://ui-avatars.com/api/?name={{auth()->user()->full_name}}" alt="user" />
+                                            <img src="https://ui-avatars.com/api/?background=000000&color=ffffff&font-size=0.33&name={{auth()->user()->full_name}}" alt="user" />
                                         @endif
 									</div>
 									<!--begin::User account menu-->
@@ -299,7 +299,7 @@
 													@if (auth()->user()->image_path)
                                                         <img src="{{ auth()->user()->image_path['real'] }}" alt="logo" />
                                                     @else
-                                                        <img src="https://ui-avatars.com/api/?name={{auth()->user()->full_name}}" alt="logo" />
+                                                        <img src="https://ui-avatars.com/api/?background=000000&color=ffffff&font-size=0.33&name={{auth()->user()->full_name}}" alt="logo" />
                                                     @endif
 												</div>
 												<!--end::Avatar-->
