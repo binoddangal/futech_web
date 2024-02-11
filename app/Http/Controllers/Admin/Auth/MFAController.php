@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Auth;
 
 use App\Http\Controllers\Controller;
 
+use App\Http\Resources\AdminUser\AdminUserResource;
 use App\Mail\Admin\Auth\LoginVerificationCodeMail;
 
 use App\Services\AdminUser\AdminUserService;
@@ -31,19 +32,16 @@ class MFAController extends Controller
             if ($user->is_email_authentication_enabled && !$user->is_mfa_enabled)
                 $this->requestEmailVerificationCode($request);
 
-            return response(["status" => "OK", 'data' => $user], 200);
-        }
-        elseif($user && !$user->is_login_verified)
-        {
+            return response(["status" => "OK", 'data' => new AdminUserResource($user)], 200);
+        } elseif ($user && !$user->is_login_verified) {
             return response([
                 'errors' => 'Email not verified. Please verify your email',
-                'status'=>'NOT_VERIFIED'
+                'status' => 'NOT_VERIFIED'
             ], 200);
-        }
-        else {
+        } else {
             return response([
                 'errors' => 'The provided credentials are incorrect.',
-                'status'=>'NOT_FOUND'
+                'status' => 'NOT_FOUND'
             ], 200);
         }
 
@@ -79,7 +77,7 @@ class MFAController extends Controller
     {
         try {
             $user = auth()->guard('admin')->user();
-            if($user->is_mfa_enable == 0) {
+            if ($user->is_mfa_enable == 0) {
                 $data['mfa_secret_code'] = null;
             }
             $user->is_email_authentication_enabled = false;
@@ -108,13 +106,13 @@ class MFAController extends Controller
     }
     function deactivateMfaAuthenticator(Request $request)
     {
-            $user = auth()->guard('admin')->user();
-            if($user->is_email_authentication_enabled == 0) {
-                $user->mfa_secret_code = null;
-            }
-            $user->is_mfa_enabled = false;
-            $user->mfa_authentication_image = null;
-            if(  $user->save())
+        $user = auth()->guard('admin')->user();
+        if ($user->is_email_authentication_enabled == 0) {
+            $user->mfa_secret_code = null;
+        }
+        $user->is_mfa_enabled = false;
+        $user->mfa_authentication_image = null;
+        if ($user->save())
             return response(["status" => "OK"], 200);
         return response(["status" => 'ERROR'], 200);
     }
@@ -130,14 +128,14 @@ class MFAController extends Controller
                 return response(["status" => "OK", 'data' => $user], 200);
             } else {
                 return response([
-                    "status"=>"ERROR",
+                    "status" => "ERROR",
                     'errors' => 'The verification code is not valid.',
                 ], 200);
             }
 
         } else {
             return response([
-                "status"=>"ERROR",
+                "status" => "ERROR",
                 'errors' => ['The provided credentials are incorrect.'],
             ], 200);
         }
@@ -169,14 +167,14 @@ class MFAController extends Controller
                 return response(["status" => "OK", 'data' => $user], 200);
             } else {
                 return response([
-                    'status'=>'ERROR',
+                    'status' => 'ERROR',
                     'errors' => 'The verification code is not valid.',
                 ], 200);
             }
 
         } else {
             return response([
-                'status'=>'ERROR',
+                'status' => 'ERROR',
                 'errors' => 'The provided credentials are incorrect.',
             ], 200);
         }
