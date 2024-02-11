@@ -212,9 +212,9 @@ class BlogService extends Service
         return false;
     }
 
-    public function findByColumns($data, $all = false)
+    public function findByColumns($data, $all = false, $resource = true)
     {
-        $response = $this->blog->where(function ($query) use ($data) {
+        $result = $this->blog->where(function ($query) use ($data) {
             if (sizeof($data) > 0) {
                 foreach ($data as $k => $v) {
                     $query->where($k, $data[$k]);
@@ -222,15 +222,15 @@ class BlogService extends Service
             }
         });
         if ($all) {
-            return BlogResource::collection($response->get());
+            $result = $result->get();
+            return $resource ? BlogResource::collection($result) : $result;
         } else {
-            $response = $response->first();
-            if (empty($response))
+            $result = $result->first();
+            if (empty($result))
                 return null;
-            return new BlogResource($response);
+            return $resource ? new BlogResource($result) : $result;
         }
     }
-
 
     public function searchByKey($key, $limit, $limitText = 100)
     {
