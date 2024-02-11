@@ -5,30 +5,54 @@
             <div class="grow">
                 <div class="flex space-x-0 md:space-x-14">
 
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-envelope text-porange-700"></i>
-                        <a href="mailto:contact@futechnepal.com" class="text-black text-base"><span>contact@futechnepal.com</span></a>
-                    </div>
+                    @if (getSetting() && getSetting()->email)
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-envelope text-porange-700"></i>
+                            <a href="mailto:{!! getSetting()->email !!}"
+                                class="text-black text-base"><span>{!! getSetting()->email !!}</span></a>
+                        </div>
+                    @endif
 
-                    <div class="space-x-2 hidden md:flex items-center">
-                        <i class="fas fa-phone text-porange-700"></i>
-                        <a href="tel:9860307418" class="text-black text-base">977 986-0307418</a>
-                    </div>
+                    @if (getSetting() && getSetting()->phone)
+                        <div class="space-x-2 hidden md:flex items-center">
+                            <i class="fas fa-phone text-porange-700"></i>
+                            <a href="tel:{!! getSetting()->phone !!}"
+                                class="text-black text-base">{!! getSetting()->phone !!}</a>
+                        </div>
+                    @endif
                 </div>
             </div>
             <div class="flex items-center space-x-6">
-                <a href="https://www.facebook.com/futechnepal" class="group transition-all text-black hover:text-porange-700" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                {{-- <a href="http://" class="group transition-all text-black hover:text-porange-700" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                </a> --}}
-                <a href="https://www.instagram.com/futechnepal/" class="group transition-all text-black hover:text-porange-700" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                {{-- <a href="http://" class="group transition-all text-black hover:text-porange-700" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a> --}}
+                @if (getSetting() && getSetting()->facebook)
+                    <a href="{!! getSetting()->facebook !!}" class="group transition-all text-black hover:text-porange-700"
+                        target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                @endif
+                @if (getSetting() && getSetting()->twitter)
+                    <a href="{!! getSetting()->twitter !!}" class="group transition-all text-black hover:text-porange-700"
+                        target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                @endif
+                @if (getSetting() && getSetting()->instagram)
+                    <a href="{!! getSetting()->instagram !!}" class="group transition-all text-black hover:text-porange-700"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                @endif
+                @if (getSetting() && getSetting()->linkedin)
+                    <a href="{!! getSetting()->linkedin !!}" class="group transition-all text-black hover:text-porange-700"
+                        target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                @endif
+                @if (getSetting() && getSetting()->youtube)
+                    <a href="{!! getSetting()->youtube !!}" class="group transition-all text-black hover:text-porange-700"
+                        target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                @endif
             </div>
         </div>
     </div>
@@ -38,7 +62,7 @@
             <nav class="nav nav-teacher">
                 <div class="nav__data">
                     <a href="{{ route('home') }}" class="nav__logo">
-                        <img src="{{ asset('assets/images/logo/Futech_Logo.png') }}" alt />
+                        <img src="{{ getLogo() }}" alt />
                     </a>
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="fas fa-bars nav__toggle-menu"></i>
