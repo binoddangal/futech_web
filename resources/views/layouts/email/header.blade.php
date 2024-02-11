@@ -192,7 +192,7 @@
                             @if (getSetting() && getSetting()->logo_path && getSetting()->logo_path['real'])
                                 <img src="{{getSetting()->logo_path['real']}}" width="150px" class="logo"/>
                             @else
-                                <img src="{{asset('ashwinifoundation/images/ashwini_logo.png')}}" width="150px" class="logo"/>
+                                <img src="{{asset('assets/images/logo/Futech_Logo.png')}}" width="150px" class="logo"/>
                             @endif
                         </a>
                     </td>

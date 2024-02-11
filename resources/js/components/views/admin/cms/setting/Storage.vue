@@ -5,7 +5,7 @@
         <div class="col-8 float-right">
           <h3>Storage setting</h3>
           <div class=" text-center" v-if="enableTest()">
-            <img :src="`${this.homeRoute}/ashwinifoundation/images/misc/lock.png`" alt="lock" height="200">
+            <img :src="`${this.homeRoute}/assets/images/lock.png`" alt="lock" height="200">
             <br>
             <v-btn class="btn btn-primary text-white" dark @click="removeStorageSetting">Remove</v-btn>
           </div>

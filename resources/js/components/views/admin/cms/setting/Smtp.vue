@@ -46,7 +46,7 @@
           </div>
           <div class="row" v-else>
             <div class="col-8 text-center">
-                <img :src="`${this.homeRoute}/ashwinifoundation/images/misc/lock.png`" alt="lock" height="200">
+                <img :src="`${this.homeRoute}/assets/images/lock.png`" alt="lock" height="200">
               <br>
               <v-btn class="btn btn-primary text-white" dark @click="removeSmtpSetting">Remove</v-btn>
             </div>
