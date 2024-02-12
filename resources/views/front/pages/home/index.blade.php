@@ -11,17 +11,25 @@ center/cover;
                 <div class="flex flex-col lg:flex-row items-center gap-14 justify-between">
                     <div class="lg:w-1/2 relative order-2 lg:order-1 pb-16 lg:pb-0">
                         <h1 class="text-5xl xl:text-6xl mb-3 xl:leading-snug font-bold text-white">
-                            The Future <br />
-                            Belongs to Those
+                            Welcometo <br />
+                            Futech Solutions
                         </h1>
                         <p class="text-borderl-500 lg:text-xl text-lg xl:text-2xl mt-4 mb-8">
-                            Guiding students to discover their unique talents <br />
-                            and find to make strengths.
+                            Futech Solutions, your destination for comprehensive IT solutions, invites you to embark on a
+journey of innovation and transformation. We specialize in UI/UX design, product development,
+SEO Specialists, digital marketing, and content writing at the crossroads of technology and
+creativity.
                         </p>
+                        <div class="flex items-center flex-wrap ">
+                            <button onclick="window.location.href='{{ route('about') }}';"
+                                class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
+                                more</button>
+                        </div>
                     </div>
+
                     <div class="lg:w-1/2 order-1 lg:order-2">
                         <div class="relative ">
-                            <img src="{{ asset('assets/images/person.png') }}" alt />
+                            <img src="{{ asset('assets/images/logo/Futech_Logo.png') }}" alt />
                         </div>
                     </div>
                 </div>
