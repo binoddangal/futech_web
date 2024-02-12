@@ -89,18 +89,23 @@ class ContactUsService
         return $this->contact->where($column, $value)->first();
     }
 
-    public function findByColumns($data, $limit = 0)
+    public function findByColumns($data = [], $all = false, $resource = true)
     {
         $result = $this->contact->where(function ($query) use ($data) {
-            foreach ($data as $key => $value) {
-                $query->where($key, $data[$key]);
+            if (sizeof($data) > 0) {
+                foreach ($data as $k => $v) {
+                    $query->where($k, $data[$k]);
+                }
             }
         });
-        if (!empty($limit) || $limit != 0) {
-            $result = $result->take($limit)->get();
-            return ContactUsResource::collection($result);
+        if ($all) {
+            $result = $result->get();
+            return $resource ? ContactUsResource::collection($result) : $result;
         } else {
-            return new ContactUsResource($result);
+            $result = $result->first();
+            if (empty($result))
+                return null;
+            return $resource ? new ContactUsResource($result) : $result;
         }
     }
 }

@@ -125,18 +125,23 @@ class NoticeService
         return $this->notice->whereSlug($slug)->whereIsActive(1)->first();
     }
 
-    public function findByColumns($noticeId, $data = null, $limit = 0)
+    public function findByColumns($data, $all = false, $resource = true)
     {
         $result = $this->notice->where(function ($query) use ($data) {
-            foreach ($data as $key => $value) {
-                $query->where($key, $data[$key]);
+            if (sizeof($data) > 0) {
+                foreach ($data as $k => $v) {
+                    $query->where($k, $data[$k]);
+                }
             }
         });
-        if (!empty($limit) || $limit != 0) {
-            $result = $result->take($limit);
-            return NoticeResource::collection($result);
+        if ($all) {
+            $result = $result->get();
+            return $resource ? NoticeResource::collection($result) : $result;
         } else {
-            return new NoticeResource($result);
+            $result = $result->first();
+            if (empty($result))
+                return null;
+            return $resource ? new NoticeResource($result) : $result;
         }
     }
 

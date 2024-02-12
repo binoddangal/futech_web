@@ -18,7 +18,7 @@
                             <ul class="breadcrumb breadcrumb-separatorless fw-semibold fs-7 my-0 pt-1">
                                 <!--begin::Item-->
                                 <li class="breadcrumb-item text-muted">
-                                    <a href="../../demo1/dist/index.html" class="text-muted text-hover-primary">Home</a>
+                                    <a href="/admin/dashboard" class="text-muted text-hover-primary">Home</a>
                                 </li>
                                 <!--end::Item-->
                                 <!--begin::Item-->
@@ -59,14 +59,10 @@ export default {
         return {
             requests: [],
             adminUserCount: 0,
-            requestCount: 0,
-            pendingUserCount: 0,
-            completeUserCount: 0,
-            rejectedUserCount: 0,
-            beneficlaryUserCount: 0,
-            fundingCompanyUserCount: 0,
-            pharmaceuticalUserCount: 0,
-            volunteerUserCount: 0,
+            blogCount: 0,
+            contactUsCount: 0,
+            teamCount: 0,
+            noticeCount: 0,
         }
     },
     mounted() {
@@ -76,14 +72,10 @@ export default {
         getDashboardStat() {
             dashboard.getStats().then(response => {
                 this.adminUserCount = response.data.adminUserCount;
-                this.requestCount = response.data.requestCount;
-                this.pendingUserCount = response.data.pendingUserCount;
-                this.completeUserCount = response.data.completeUserCount;
-                this.rejectedUserCount = response.data.rejectedUserCount;
-                this.beneficlaryUserCount = response.data.beneficlaryUserCount;
-                this.fundingCompanyUserCount = response.data.fundingCompanyUserCount;
-                this.pharmaceuticalUserCount = response.data.pharmaceuticalUserCount;
-                this.volunteerUserCount = response.data.volunteerUserCount;
+                this.blogCount = response.data.adminUserCount;
+                this.contactUsCount = response.data.adminUserCount;
+                this.teamCount = response.data.adminUserCount;
+                this.noticeCount = response.data.adminUserCount;
             })
         }
     },
