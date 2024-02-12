@@ -105,7 +105,7 @@ center/cover;
 
                                 <div class="p-6">
                                     <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                        {{ $blog->categories }}</h2>
+                                        {{ $blog->categories[0]->title }}</h2>
                                     <h1 class="title-font text-lg font-medium text-gray-600 mb-3">{{ $blog->title }}</h1>
                                     <p class="leading-relaxed mb-3">{!! Str::limit($blog->content, 100, '...') !!}</p>
                                     <div class="flex items-center flex-wrap ">
