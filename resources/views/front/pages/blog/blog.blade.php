@@ -24,79 +24,46 @@ background: url('{{ asset('assets/images/bg/brcm.jpg') }}') no-repeat center
                 </ul>
             </div>
         </section>
-        <section class="text-gray-600 body-font">
-            <div class="container px-4 py-24 mx-auto">
-                <div class="max-w-2xl mx-auto mb-10 text-center">
-                    <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
-                        Our Blogs
-                    </h4>
-                    <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-black">
-                        Stay Up To Date With Our News.
-                    </h2>
-                </div>
-                <div class="flex flex-wrap -m-4">
-                    <div class="p-4 md:w-1/3">
-                        <div class="h-full rounded-xl overflow-hidden shadow-lg">
-                            <img class="lg:h-48 md:h-36 w-full object-cover object-center  transform hover:scale-110 transition duration-500"
-                                src="https://images.unsplash.com/photo-1618172193622-ae2d025f4032?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
-                                alt="blog">
-                            <div class="p-6">
-                                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                    CATEGORY-1</h2>
-                                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">The Catalyzer</h1>
-                                <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                    jianbing
-                                    microdosing tousled waistcoat.</p>
-                                <div class="flex items-center flex-wrap ">
-                                    <button window.location.href="{{ route('blogdetail') }}";
-                                        class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
-                                        more</button>
-                                </div>
-                            </div>
-                        </div>
+        @if (count($blogs))
+            <section class="text-gray-600 body-font">
+                <div class="container px-4 py-24 mx-auto">
+                    <div class="max-w-2xl mx-auto mb-10 text-center">
+                        <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
+                            Our Blogs
+                        </h4>
+                        <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-black">
+                            Stay Up To Date With Our News.
+                        </h2>
                     </div>
-                    <div class="p-4 md:w-1/3">
-                        <div class="h-full rounded-xl overflow-hidden shadow-lg">
-                            <img class="lg:h-48 md:h-36 w-full object-cover object-center transform hover:scale-110 transition duration-500"
-                                src="https://images.unsplash.com/photo-1624628639856-100bf817fd35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8M2QlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
-                                alt="blog">
-                            <div class="p-6">
-                                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                    CATEGORY-1</h2>
-                                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">The Catalyzer</h1>
-                                <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                    jianbing
-                                    microdosing tousled waistcoat.</p>
-                                <div class="flex items-center flex-wrap ">
-                                    <button window.location.href="{{ route('blogdetail') }}";
-                                        class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
-                                        more</button>
+                    <div class="flex flex-wrap -m-4">
+                        @foreach ($blogs as $blog)
+                        <div class="p-4 md:w-1/3">
+                            <div class="h-full rounded-xl overflow-hidden shadow-lg">
+                                @if ($blog->image)
+                                <img class="lg:h-48 md:h-36 w-full object-cover object-center  transform hover:scale-110 transition duration-500"
+                                    src="{{ $blog->image_path['real'] }}" alt="{{ $blog->title }}">
+                                    @else
+                                    <img class="lg:h-48 md:h-36 w-full object-cover object-center  transform hover:scale-110 transition duration-500"
+                                    src="{{asset('assets/images/bg.jpg')}}" alt="{{ $blog->title }}">
+                                    @endif
+
+                                <div class="p-6">
+                                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                                        {{ $blog->categories[0]->title }}</h2>
+                                    <h1 class="title-font text-lg font-medium text-gray-600 mb-3">{{ $blog->title }}</h1>
+                                    <p class="leading-relaxed mb-3">{!! Str::limit($blog->content, 100, '...') !!}</p>
+                                    <div class="flex items-center flex-wrap ">
+                                        <button
+                                            class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
+                                            more</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-4 md:w-1/3">
-                        <div class="h-full rounded-xl overflow-hidden shadow-lg">
-                            <img class="lg:h-48 md:h-36 w-full object-cover object-center transform hover:scale-110 transition duration-500"
-                                src="https://images.unsplash.com/photo-1631700611307-37dbcb89ef7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
-                                alt="blog">
-                            <div class="p-6">
-                                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                    CATEGORY-1</h2>
-                                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">The Catalyzer</h1>
-                                <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                    jianbing
-                                    microdosing tousled waistcoat.</p>
-                                <div class="flex items-center flex-wrap ">
-                                    <button window.location.href="{{ route('blogdetail') }}";
-                                        class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
-                                        more</button>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        @endif
     </main>
 @endsection

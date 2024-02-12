@@ -93,7 +93,7 @@ class BlogCategoryService
     public function getCategories()
     {
         $category = $this->category->whereIsActive(1)->orderBy('id', "DESC")->paginate();
-    return BlogCategoryResource::collection($category);
+        return BlogCategoryResource::collection($category);
     }
 
     public function findByColumns($data, $all = false)

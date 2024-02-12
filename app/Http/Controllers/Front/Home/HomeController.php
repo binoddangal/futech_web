@@ -33,12 +33,15 @@ class HomeController extends Controller
 
     public function service()
     {
-        return view('front.pages.service.service');
+        $ourProjects = $this->ourProject->getAllActive();
+        return view('front.pages.service.service', compact('ourProjects'));
     }
 
     public function blog()
     {
-        return view('front.pages.blog.blog');
+        $category = $this->category->getCategories(10);
+        $blogs = $this->blog->getAllActive();
+        return view('front.pages.blog.blog', compact('category', 'blogs'));
     }
 
     public function blogDetails()
@@ -48,7 +51,8 @@ class HomeController extends Controller
 
     public function about()
     {
-        return \view('front.pages.about.aboutus');
+        $ourProjects = $this->ourProject->getAllActive();
+        return \view('front.pages.about.aboutus', compact('ourProjects'));
     }
 
     public function contact()

@@ -47,50 +47,63 @@ background: url('{{ asset('assets/images/bg/brcm.jpg') }}') no-repeat center
                                 </svg>
                             </span>
                         </h2>
-                        <p class="text-xl text-interface-200 mb-4">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                            of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                            but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                            and more recently with desktop publishing software like Aldus PageMaker including versions of
-                            Lorem Ipsum.
+                        <p class="text-lg text-interface-200 mb-4">
+                            Welcome to Futech Solutions where Digital Excellence Unfolds
+                            Futech Solutions, your destination for comprehensive IT solutions, invites you to embark on a
+                            journey of innovation and transformation. We specialize in UI/UX design, product development,
+                            SEO Specialists, digital marketing, and content writing at the crossroads of technology and
+                            creativity. Our mission is to help your brand succeed in the ever-changing digital landscape. We
+                            bring together a team of experienced experts who are committed to pushing the limits of what is
+                            possible. We have the knowledge to make your vision into reality, whether you want to improve
+                            your online profile, create seamless user experiences, or expand your digital reach.
+                            Futech Solutions provides more than just services; we are dedicated to innovation, client success,
+                            and ethical methods. Our user-centric approach ensures that every design, strategy, and piece of
+                            content is tailored to your target audience.
+                            Discover the infinite possibilities for your brand's digital future. Join us in redefining how the
+                            world experiences technology. Welcome to Futech Solutions, Your Digital Excellence Gateway!
                         </p>
-                        <div>
+                        {{-- <div>
                             <img src="{{ asset(asset('assets/images/icons/ux.svg')) }}" alt="">
                             <span class="text-xl text-interface-100 font-medium">CEO &amp; Founder of QuomodoSoft</span>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
         </section>
-        <section class="lg:py-120 py-20 bg-green-50">
-            <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                <div class="max-w-2xl mx-auto mb-10 text-center">
-                    <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
-                        Our Services
-                    </h4>
-                    <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-interface-100">
-                        What we Provide to Every Clients
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                    <div
-                        class="bg-white rounded-custom p-6 overflow-hidden relative hover:shadow-custom transition-all hover:border-porange-500">
-                        <span class="gradient-text">UI <br>
-                            Design</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/assets/images/icons/ui.svg" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            UI Design
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
+        @if (count($ourProjects))
+            <section class="lg:py-120 py-20 bg-green-50">
+                <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                    <div class="max-w-2xl mx-auto mb-10 text-center">
+                        <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
+                            Our Services
+                        </h4>
+                        <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-interface-100">
+                            What we Provide to Every Clients
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                        @foreach ($ourProjects as $ourProject)
+                            <div
+                                class="bg-white rounded-custom p-6 overflow-hidden relative hover:shadow-custom transition-all hover:border-porange-500">
+                                <span class="gradient-text">{{ $ourProject['title'] }}</span>
+                                <div
+                                    class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
+                                    @if ($ourProject && $ourProject->featured_photo_path)
+                                        <img src="{{ $ourProject->featured_photo_path['real'] }}"
+                                            alt="{{ $ourProject['title'] }}">
+                                    @else
+                                        <img style="height: 5rem;" src="{{ asset('assets/images/logo/Futech_Logo.png') }}"
+                                            alt="{{ $ourProject['title'] }}">
+                                    @endif
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3 text-interface-100">
+                                    {{ $ourProject['title'] }}
+                                </h3>
+                                <p class="text-lg text-interface-200 mb-3">
+                                    {!! $ourProject['description'] !!}
+                                </p>
+                                {{-- <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
                             <span>Learn more</span>
                             <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25" height="26"
                                 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,146 +114,14 @@ background: url('{{ asset('assets/images/bg/brcm.jpg') }}') no-repeat center
                                         stroke-linecap="round" stroke-linejoin="round"></path>
                                 </g>
                             </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">UX <br>
-                            Design</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/assets/images/icons/ux.svg" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            UX Design
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25" height="26"
-                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">Product <br>
-                            Design</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/assets/images/icons/pd.svg" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            Product Design
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">Digital <br>
-                            Marketing</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/assets/images/icons/mk.svg" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            Digital Marketing
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">Content <br>
-                            Writing</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/assets/images/icons/cont.svg" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            Content Writing
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">SEO<br>
-                            Specialist</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="http://futech.local/assets/images/icons/search.svg" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            SEO Specialist
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
+                        </a> --}}
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        @endif
+
         <section class="lg:py-120 py-20">
             <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
@@ -255,20 +136,19 @@ background: url('{{ asset('assets/images/bg/brcm.jpg') }}') no-repeat center
                     <div class="lg:col-span-3 w-full">
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10">
                             <div>
-                                <img class="h-20 w-20" src="http://futech.local/assets/images/clients/logo (1).png"
+                                <img class="h-20 w-20" src="{{ asset('assets/images/clients/logo (1).png') }}"
                                     alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full" src="http://futech.local/assets/images/clients/logo.png"
+                                <img class="h-20 w-full" src="{{ asset('assets/images/clients/logo.png') }}" alt="">
+                            </div>
+                            <div>
+                                <img class="h-20 w-full" src="{{ asset('assets/images/clients/QUEEN-PNG.png') }}"
                                     alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full"
-                                    src="http://futech.local/assets/images/clients/QUEEN-PNG.png" alt="">
-                            </div>
-                            <div>
-                                <img class="h-20 w-full"
-                                    src="http://futech.local/assets/images/clients/Royal-musk.png" alt="">
+                                <img class="h-20 w-full" src="{{ asset('assets/images/clients/Royal-musk.png') }}"
+                                    alt="">
                             </div>
                         </div>
                     </div>
