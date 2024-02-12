@@ -53,7 +53,7 @@ class AlbumValueService extends Service
         // try {
             $data["album_id"] = $albumId;
             foreach ($data['path'] as $i => $file) {
-                $data['path'] = $this->upload($file, null, null, $this->uploadPath);
+                $data['path'] = $this->upload($file, $this->uploadPath);
                 $this->value->create($data);
             }
             return true;
@@ -95,7 +95,7 @@ class AlbumValueService extends Service
                 if (!empty($value->path)) {
                     $this->deleteFile($this->uploadPath, $value->path);
                 }
-                $data['path'] = $this->upload($data['path'], null, null, $this->uploadPath);
+                $data['path'] = $this->upload($data['path'], $this->uploadPath);
             }
             if ($data["is_featured"]) {
                 $this->makeNonFeatured($albumId, $id);

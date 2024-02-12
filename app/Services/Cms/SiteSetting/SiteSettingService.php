@@ -26,22 +26,22 @@ class SiteSettingService extends Service
             $data['enable_cookies'] = (isset($data['enable_cookies']) && $data['enable_cookies'] == true) ? true : 0;
             $setting = $this->getSetting();
             if (!empty($data['logo'])) {
-                $data['logo'] = $this->upload($data['logo'], null, null, $this->uploadPath);
+                $data['logo'] = $this->upload($data['logo'], $this->uploadPath);
             }
             if (!empty($data['app_logo'])) {
-                $data['app_logo'] = $this->upload($data['app_logo'], null, null, $this->uploadPath);
+                $data['app_logo'] = $this->upload($data['app_logo'], $this->uploadPath);
             }
             if (!empty($data['principal_signature'])) {
-                $data['principal_signature'] = $this->upload($data['principal_signature'], null, null, $this->uploadPath);
+                $data['principal_signature'] = $this->upload($data['principal_signature'], $this->uploadPath);
             }
             if (!empty($data['fav_icon'])) {
-                $data['fav_icon'] = $this->upload($data['fav_icon'], null, null, $this->uploadPath);
+                $data['fav_icon'] = $this->upload($data['fav_icon'], $this->uploadPath);
             }
             if (!empty($data['login_bg_image'])) {
-                $data['login_bg_image'] = $this->upload($data['login_bg_image'], null, null, $this->uploadPath);
+                $data['login_bg_image'] = $this->upload($data['login_bg_image'], $this->uploadPath);
             }
             if (!empty($data['email_logo_image_file'])) {
-                $data['email_logo_image'] = $this->upload($data['email_logo_image_file'], null, null, $this->uploadPath);
+                $data['email_logo_image'] = $this->upload($data['email_logo_image_file'], $this->uploadPath);
             }
             if (!empty($setting))
                 return $setting->update($data);
@@ -86,38 +86,38 @@ class SiteSettingService extends Service
                 if (!empty($setting->logo)) {
                     $this->deleteFile($this->uploadPath, $setting->logo);
                 }
-                $data['logo'] = $this->upload($data['logo_file'], null, null, $this->uploadPath);
+                $data['logo'] = $this->upload($data['logo_file'], $this->uploadPath);
             }
             if (!empty($data['app_logo_file'])) {
                 if (!empty($setting->app_logo)) {
                     $this->deleteFile($this->uploadPath, $setting->app_logo);
                 }
-                $data['app_logo'] = $this->upload($data['app_logo_file'], null, null, $this->uploadPath);
+                $data['app_logo'] = $this->upload($data['app_logo_file'], $this->uploadPath);
             }
             if (!empty($data['footer_logo_file'])) {
                 if (!empty($setting->footer_logo)) {
                     $this->deleteFile($this->uploadPath, $setting->footer_logo);
                 }
-                $data['footer_logo'] = $this->upload($data['footer_logo_file'], null, null, $this->uploadPath);
+                $data['footer_logo'] = $this->upload($data['footer_logo_file'], $this->uploadPath);
             }
 
             if (!empty($data['fav_icon_file'])) {
                 if (!empty($setting->fav_icon)) {
                     $this->deleteFile($this->uploadPath, $setting->fav_icon);
                 }
-                $data['fav_icon'] = $this->upload($data['fav_icon_file'], null, null, $this->uploadPath);
+                $data['fav_icon'] = $this->upload($data['fav_icon_file'], $this->uploadPath);
             }
             if (!empty($data['login_bg_image_file'])) {
                 if (!empty($setting->login_bg_image)) {
                     $this->deleteFile($this->uploadPath, $setting->login_bg_image);
                 }
-                $data['login_bg_image'] = $this->upload($data['login_bg_image_file'], null, null, $this->uploadPath);
+                $data['login_bg_image'] = $this->upload($data['login_bg_image_file'], $this->uploadPath);
             }
             if (!empty($data['email_logo_image_file'])) {
                 if (!empty($setting->email_logo_image)) {
                     $this->deleteFile($this->uploadPath, $setting->email_logo_image);
                 }
-                $data['email_logo_image'] = $this->upload($data['email_logo_image_file'], null, null, $this->uploadPath);
+                $data['email_logo_image'] = $this->upload($data['email_logo_image_file'], $this->uploadPath);
             }
             return $setting->update($data);
 //        } catch (\Exception $ex) {
@@ -143,7 +143,7 @@ class SiteSettingService extends Service
     public function testAwsUpload($file)
     {
         $uploadPath = 'uploads/test';
-        $data = $this->upload($file, null, null, $uploadPath);
+        $data = $this->upload($file, $uploadPath);
         $path = $uploadPath . "/" . $data;
         if (env('APP_ENV')!="production")
             $path = "local/".$path;

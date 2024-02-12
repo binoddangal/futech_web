@@ -49,7 +49,7 @@ class CareerApplicationService extends Service
         $career = $this->career->findByColumn('slug', $slug);
         $data['career_id'] = $career->id;
         if (!empty($data['file'])) {
-            $data['file'] = $this->upload($data['file'], null, null, $this->uploadPath);
+            $data['file'] = $this->upload($data['file'], $this->uploadPath);
         }
         return $this->application->create($data);
        }

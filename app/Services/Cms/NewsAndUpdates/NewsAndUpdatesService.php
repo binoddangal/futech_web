@@ -54,7 +54,7 @@ class NewsAndUpdatesService extends Service
     {
         try {
         if (!empty($data['file'])) {
-            $data['social_share_image'] = $this->upload($data['file'], null, null, $this->uploadPath);
+            $data['social_share_image'] = $this->upload($data['file'], $this->uploadPath);
         }
         return $this->newsAndUpdates->create($data);
            } catch
@@ -80,7 +80,7 @@ class NewsAndUpdatesService extends Service
             if (!empty($newsAndUpdates->social_share_image)) {
                 $this->deleteFile($this->uploadPath, $newsAndUpdates->social_share_image);
             }
-            $data['social_share_image'] = $this->upload($data['file'], null, null, $this->uploadPath);
+            $data['social_share_image'] = $this->upload($data['file'], $this->uploadPath);
         }
         // $data['is_active'] = (isset($data['is_active']) && $data['is_active'] == "1") ? 1 : 0;
 

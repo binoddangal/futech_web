@@ -63,7 +63,7 @@ class TeamService extends Service
             $data['position'] = $this->team->orderBy('position','DESC')->first();
             $data['position'] = $data['position'] && $data['position']->position ? $data['position']->position+1:1;
             if (!empty($data['image_file'])) {
-                $data['image'] = $this->upload($data['image_file'], null, null, $this->uploadPath);
+                $data['image'] = $this->upload($data['image_file'], $this->uploadPath);
             }
             $team = $this->team->create($data);
             return new TeamResource($team);
@@ -90,7 +90,7 @@ class TeamService extends Service
                 if (!empty($team->image)) {
                     $this->deleteFile($this->uploadPath, $team->image);
                 }
-                $data['image'] = $this->upload($data['image_file'], null, null, $this->uploadPath);
+                $data['image'] = $this->upload($data['image_file'], $this->uploadPath);
             }
 
             return $team->update($data);

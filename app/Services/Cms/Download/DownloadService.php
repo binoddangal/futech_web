@@ -45,10 +45,10 @@ class DownloadService extends Service
     {
         try {
             if (isset($data['file'])) {
-                $data['path'] = $this->upload($data['file'], null, null, $this->uploadPath);
+                $data['path'] = $this->upload($data['file'], $this->uploadPath);
             }
             if (isset($data['image'])) {
-                $data['preview_image'] = $this->upload($data['image'], null, null, $this->uploadPath);
+                $data['preview_image'] = $this->upload($data['image'], $this->uploadPath);
             }
             $data['is_private']  = (isset($data['is_private']) && ($data['is_private'] == 1 || $data['is_private'] == true))?1:0;
             $data['is_active']  = (isset($data['is_active']) && ($data['is_active'] == 1 || $data['is_active'] == true))?1:0;
@@ -98,13 +98,13 @@ class DownloadService extends Service
             if (!empty($download->path)) {
                 $this->deleteUploaded($this->uploadPath, $download->path);
             }
-            $data['path'] = $this->upload($data['path'], null, null, $this->uploadPath);
+            $data['path'] = $this->upload($data['path'], $this->uploadPath);
         }
         if (isset($data['preview_image'])) {
             if (!empty($download->preview_image)) {
                 $this->deleteUploaded($this->uploadPath, $download->preview_image);
             }
-            $data['preview_image'] = $this->upload($data['preview_image'], null, null, $this->uploadPath);
+            $data['preview_image'] = $this->upload($data['preview_image'], $this->uploadPath);
         }
         return $download->update($data);
        } catch (\Exception $ex) {

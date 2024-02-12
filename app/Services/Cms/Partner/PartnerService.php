@@ -51,7 +51,7 @@ class PartnerService extends Service
     {
 
             if (!empty($data['file'])) {
-                $data['featured_photo'] = $this->upload($data['file'], null, null, $this->uploadPath);
+                $data['featured_photo'] = $this->upload($data['file'], $this->uploadPath);
             }
             return $this->partner->create($data);
 
@@ -74,7 +74,7 @@ class PartnerService extends Service
             if (!empty($partner->featured_photo)) {
                 $this->deleteFile($this->uploadPath, $partner->featured_photo);
             }
-            $data['featured_photo'] = $this->upload($data['file'], null, null, $this->uploadPath);
+            $data['featured_photo'] = $this->upload($data['file'], $this->uploadPath);
         }
         // $data['is_active'] = (isset($data['is_active']) && $data['is_active'] == "1") ? 1 : 0;
 

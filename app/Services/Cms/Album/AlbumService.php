@@ -82,7 +82,7 @@ class AlbumService extends Service
         try {
             $data['is_active'] = (isset($data['is_active']) && $data['is_active'] == true) ? true : 0;
             if (isset($data['file']) && !empty($data['file'])) {
-                $data['cover_image'] = $this->upload($data['file'], null, null, $this->uploadPath);
+                $data['cover_image'] = $this->upload($data['file'], $this->uploadPath);
             }
             return $this->album->create($data);
         } catch
@@ -105,7 +105,7 @@ class AlbumService extends Service
                 if (!empty($album->cover_image)) {
                     $this->deleteFile($this->uploadPath, $album->cover_image);
                 }
-                $data['cover_image'] = $this->upload($data['cover_image'], null, null, $this->uploadPath);
+                $data['cover_image'] = $this->upload($data['cover_image'], $this->uploadPath);
             }
             $data['is_active'] = (isset($data['is_active']) && $data['is_active'] == "1") ? 1 : 0;
             return $album->update($data);
@@ -191,5 +191,5 @@ class AlbumService extends Service
         return  AlbumResource::collection($albumGallery);
     }
 
-   
+
 }

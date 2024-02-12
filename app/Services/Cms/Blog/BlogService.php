@@ -127,13 +127,13 @@ class BlogService extends Service
     {
 //        try {
         if (isset($data['social_share_image_file']) && !empty($data['social_share_image_file'])) {
-            $data['social_share_image'] = $this->upload($data['social_share_image_file'], null, null, $this->uploadPath);
+            $data['social_share_image'] = $this->upload($data['social_share_image_file'], $this->uploadPath);
         }
         if (isset($data['image_file']) && !empty($data['image_file'])) {
-            $data['image'] = $this->upload($data['image_file'], null, null, $this->uploadPath);
+            $data['image'] = $this->upload($data['image_file'], $this->uploadPath);
         }
         if (isset($data['author_image_file']) && !empty($data['author_image_file'])) {
-            $data['author_image'] = $this->upload($data['author_image_file'], null, null, $this->uploadPath);
+            $data['author_image'] = $this->upload($data['author_image_file'], $this->uploadPath);
         }
         if (!empty($data['publish_date'])) {
             $data['publish_date'] = Carbon::create($data['publish_date'])->toDateTimeString();
@@ -162,20 +162,20 @@ class BlogService extends Service
             if (!empty($blog->social_share_image)) {
                 $this->deleteFile($this->uploadPath, $blog->social_share_image);
             }
-            $data['social_share_image'] = $this->upload($data['social_share_image'], null, null, $this->uploadPath);
+            $data['social_share_image'] = $this->upload($data['social_share_image'], $this->uploadPath);
         }
 
         if (!empty($data['image_file'])) {
             if (!empty($blog->image)) {
                 $this->deleteFile($this->uploadPath, $blog->image);
             }
-            $data['image'] = $this->upload($data['image_file'], null, null, $this->uploadPath);
+            $data['image'] = $this->upload($data['image_file'], $this->uploadPath);
         }
         if (!empty($data['author_image_file'])) {
             if (!empty($blog->author_image)) {
                 $this->deleteFile($this->uploadPath, $blog->author_image);
             }
-            $data['author_image'] = $this->upload($data['author_image_file'], null, null, $this->uploadPath);
+            $data['author_image'] = $this->upload($data['author_image_file'], $this->uploadPath);
         }
 
         if (!empty($data['publish_date']) && isset($data['publish_date'])) {
