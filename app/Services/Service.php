@@ -79,7 +79,6 @@ abstract class Service
             $file->move($destination, $newFileName);
             $realPath = $uploadPath . "/" . $newFileName;
             if (getStorageType() != 'local') {
-                $realPath = $uploadPath . "/" . $fileName;
                 $this->uploadToS3($uploadPath, $realPath, null, $newFileName, $visibility);
             }
             return $newFileName;
