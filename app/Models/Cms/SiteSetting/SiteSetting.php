@@ -9,8 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class SiteSetting extends Model
 {
-    use HasFactory,
-        SoftDeletes, Loggable;
+    use HasFactory, SoftDeletes, Loggable;
 
     public $uploadPath = 'uploads/setting';
     protected $fillable = [
