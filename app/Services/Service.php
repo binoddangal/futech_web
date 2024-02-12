@@ -31,7 +31,7 @@ abstract class Service
 
     public function uploadFileAndImages(UploadedFile $file, $uploadPath, $width = 320, $height = 320, $visibility, $fName = null)
     {
-        $imageType = ['jpeg', 'jpg', 'png', 'JPEG', 'JPG', 'ico', 'svg'];
+        $imageType = ['jpeg', 'jpg', 'png', 'JPEG', 'JPG', 'ico'];
 
         if (!is_dir('uploads'))
             mkdir('uploads', 0775, true);
