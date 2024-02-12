@@ -27,33 +27,41 @@ center/cover;
                 </div>
             </div>
         </section>
-        <section class="lg:py-120 py-20 bg-green-50">
-            <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                <div class="max-w-2xl mx-auto mb-10 text-center">
-                    <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
-                        Our Services
-                    </h4>
-                    <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-interface-100">
-                        What we Provide to Every Clients
-                    </h2>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                    <div
-                        class="bg-white rounded-custom p-6 overflow-hidden relative hover:shadow-custom transition-all hover:border-porange-500">
-                        <span class="gradient-text">UI <br>
-                            Design</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('assets/images/icons/ui.svg')}}" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            UI Design
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
+
+        @if (count($ourProjects))
+            <section class="lg:py-120 py-20 bg-green-50">
+                <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                    <div class="max-w-2xl mx-auto mb-10 text-center">
+                        <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
+                            Our Services
+                        </h4>
+                        <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-interface-100">
+                            What we Provide to Every Clients
+                        </h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                        @foreach ($ourProjects as $ourProject)
+                            <div
+                                class="bg-white rounded-custom p-6 overflow-hidden relative hover:shadow-custom transition-all hover:border-porange-500">
+                                <span class="gradient-text">{{ $ourProject['title'] }}</span>
+                                <div
+                                    class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
+                                    @if ($ourProject && $ourProject->featured_photo_path)
+                                        <img src="{{ $ourProject->featured_photo_path['real'] }}"
+                                            alt="{{ $ourProject['title'] }}">
+                                    @else
+                                        <img style="height: 5rem;" src="{{ asset('assets/images/logo/Futech_Logo.png') }}"
+                                            alt="{{ $ourProject['title'] }}">
+                                    @endif
+                                </div>
+                                <h3 class="text-2xl font-bold mb-3 text-interface-100">
+                                    {{ $ourProject['title'] }}
+                                </h3>
+                                <p class="text-lg text-interface-200 mb-3">
+                                    {!! $ourProject['description'] !!}
+                                </p>
+                                {{-- <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
                             <span>Learn more</span>
                             <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25" height="26"
                                 viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,220 +72,56 @@ center/cover;
                                         stroke-linecap="round" stroke-linejoin="round"></path>
                                 </g>
                             </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">UX <br>
-                            Design</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('assets/images/icons/ux.svg')}}" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            UX Design
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">Product <br>
-                            Design</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('assets/images/icons/pd.svg')}}" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            Product Design
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">Digital <br>
-                            Marketing</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('assets/images/icons/mk.svg')}}" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            Digital Marketing
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">Content <br>
-                            Writing</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('assets/images/icons/cont.svg')}}" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            Content Writing
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="bg-white rounded-custom p-6 overflow-hidden relative transition-all">
-                        <span class="gradient-text">SEO<br>
-                            Specialist</span>
-                        <div
-                            class="w-36 h-36 rounded-full inline-flex items-center justify-center bg-blue-600 bg-opacity-10 absolute -right-5 -top-5">
-                            <img src="{{asset('assets/images/icons/search.svg')}}" alt="">
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-interface-100">
-                            SEO Specialist
-                        </h3>
-                        <p class="text-lg text-interface-200 mb-3">
-                            Pellentesque non nibh sapien to a find rutrrnec into a
-                            vestibulum in aand find to mollis.
-                        </p>
-                        <a href="#" class="text-interface-100 transition-all group text-base underline inline-flex">
-                            <span>Learn more</span>
-                            <svg class="stroke-interface-100 group-hover:stroke-porange-500" width="25"
-                                height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#000000" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"></path>
-                                </g>
-                            </svg>
-                        </a>
+                        </a> --}}
+                            </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="text-gray-600 body-font">
-            <div class="container px-4 py-24 mx-auto">
-                <div class="max-w-2xl mx-auto mb-10 text-center">
-                    <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
-                        Our Blogs
-                    </h4>
-                    <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-black">
-                        Stay Up To Date With Our News.
-                    </h2>
-                </div>
-                <div class="flex flex-wrap -m-4">
-                    <div class="p-4 md:w-1/3">
-                        <div class="h-full rounded-xl overflow-hidden shadow-lg">
-                            <img class="lg:h-48 md:h-36 w-full object-cover object-center  transform hover:scale-110 transition duration-500"
-                                src="https://images.unsplash.com/photo-1618172193622-ae2d025f4032?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
-                                alt="blog">
-                            <div class="p-6">
-                                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                    CATEGORY-1</h2>
-                                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">The Catalyzer</h1>
-                                <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                    jianbing
-                                    microdosing tousled waistcoat.</p>
-                                <div class="flex items-center flex-wrap ">
-                                    <button
-                                        class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
-                                        more</button>
+            </section>
+        @endif
+
+        @if (count($blogs))
+            <section class="text-gray-600 body-font">
+                <div class="container px-4 py-24 mx-auto">
+                    <div class="max-w-2xl mx-auto mb-10 text-center">
+                        <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
+                            Our Blogs
+                        </h4>
+                        <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-black">
+                            Stay Up To Date With Our News.
+                        </h2>
+                    </div>
+                    <div class="flex flex-wrap -m-4">
+                        @foreach ($blogs as $blog)
+                        <div class="p-4 md:w-1/3">
+                            <div class="h-full rounded-xl overflow-hidden shadow-lg">
+                                @if ($blog->image)
+                                <img class="lg:h-48 md:h-36 w-full object-cover object-center  transform hover:scale-110 transition duration-500"
+                                    src="{{ $blog->image_path['real'] }}" alt="{{ $blog->title }}">
+                                    @else
+                                    <img class="lg:h-48 md:h-36 w-full object-cover object-center  transform hover:scale-110 transition duration-500"
+                                    src="{{asset('assets/images/bg.jpg')}}" alt="{{ $blog->title }}">
+                                    @endif
+
+                                <div class="p-6">
+                                    <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                                        {{ $blog->categories }}</h2>
+                                    <h1 class="title-font text-lg font-medium text-gray-600 mb-3">{{ $blog->title }}</h1>
+                                    <p class="leading-relaxed mb-3">{!! Str::limit($blog->content, 100, '...') !!}</p>
+                                    <div class="flex items-center flex-wrap ">
+                                        <button
+                                            class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
+                                            more</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-4 md:w-1/3">
-                        <div class="h-full rounded-xl overflow-hidden shadow-lg">
-                            <img class="lg:h-48 md:h-36 w-full object-cover object-center transform hover:scale-110 transition duration-500"
-                                src="https://images.unsplash.com/photo-1624628639856-100bf817fd35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8M2QlMjBpbWFnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
-                                alt="blog">
-                            <div class="p-6">
-                                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                    CATEGORY-1</h2>
-                                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">The Catalyzer</h1>
-                                <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                    jianbing
-                                    microdosing tousled waistcoat.</p>
-                                <div class="flex items-center flex-wrap ">
-                                    <button
-                                        class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
-                                        more</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-4 md:w-1/3">
-                        <div class="h-full rounded-xl overflow-hidden shadow-lg">
-                            <img class="lg:h-48 md:h-36 w-full object-cover object-center transform hover:scale-110 transition duration-500"
-                                src="https://images.unsplash.com/photo-1631700611307-37dbcb89ef7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
-                                alt="blog">
-                            <div class="p-6">
-                                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
-                                    CATEGORY-1</h2>
-                                <h1 class="title-font text-lg font-medium text-gray-600 mb-3">The Catalyzer</h1>
-                                <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings
-                                    jianbing
-                                    microdosing tousled waistcoat.</p>
-                                <div class="flex items-center flex-wrap ">
-                                    <button
-                                        class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
-                                        more</button>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        @endif
+
         <section class="lg:py-120 py-20">
             <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
@@ -292,16 +136,19 @@ center/cover;
                     <div class="lg:col-span-3 w-full">
                         <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10">
                             <div>
-                                <img class="h-20 w-20" src="{{asset('assets/images/clients/logo (1).png')}}" alt="">
+                                <img class="h-20 w-20" src="{{ asset('assets/images/clients/logo (1).png') }}"
+                                    alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full" src="{{asset('assets/images/clients/logo.png')}}" alt="">
+                                <img class="h-20 w-full" src="{{ asset('assets/images/clients/logo.png') }}" alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full" src="{{asset('assets/images/clients/QUEEN-PNG.png')}}" alt="">
+                                <img class="h-20 w-full" src="{{ asset('assets/images/clients/QUEEN-PNG.png') }}"
+                                    alt="">
                             </div>
                             <div>
-                                <img class="h-20 w-full" src="{{asset('assets/images/clients/Royal-musk.png')}}" alt="">
+                                <img class="h-20 w-full" src="{{ asset('assets/images/clients/Royal-musk.png') }}"
+                                    alt="">
                             </div>
                         </div>
                     </div>

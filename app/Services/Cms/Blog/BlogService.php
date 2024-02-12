@@ -95,6 +95,12 @@ class BlogService extends Service
         return BlogResource::collection($blogs);
     }
 
+    public function getAllActive()
+    {
+        $blog = $this->blog->whereIsActive(1)->get();
+        return  BlogResource::collection($blog);
+    }
+
     public function getPastEvent($type, $limit, $resource = true)
     {
         $news = $this->blog->whereIsActive(1)->whereType($type)->whereDate('event_end', '<', Carbon::now()->toDateString())->whereIsActive(1)->orderBy('publish_date', "DESC")->paginate($limit);
