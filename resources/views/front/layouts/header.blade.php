@@ -103,14 +103,13 @@
                                 About Us
                             </a>
                         </li>
-
+                        <div class="xl:block py-3">
+                            <a href="{{ route('contact') }}"
+                                class="bg-porange-700 group text-interface-100 px-6 py-4 font-medium rounded-lg inline-flex justify-center items-center transition-all hover:bg-porange-900">
+                                <span>Let's Talk <i class="fas fa-arrow-right fa-sm mt-1 "></i></span>
+                            </a>
+                        </div>
                     </ul>
-                </div>
-                <div class="hidden xl:block">
-                    <a href="{{ route('contact') }}"
-                        class="bg-porange-700 group text-interface-100 px-6 py-4 font-medium rounded-lg inline-flex justify-center items-center transition-all hover:bg-porange-900">
-                        <span>Let's Talk <i class="fas fa-arrow-right fa-sm mt-1 "></i></span>
-                    </a>
                 </div>
             </nav>
         </div>
