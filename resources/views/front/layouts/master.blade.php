@@ -9,9 +9,7 @@
     <title>Futech Solution</title>
 
     <!-- Company Icon -->
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ getFavIcon() }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ getFavIcon() }}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ getFavIcon() }}" />
+    <link rel="icon" type="image/png" href="{{ getFavIcon() }}" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css" />
@@ -48,6 +46,7 @@
     </section>
     <script src="{{asset('assets/js/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('assets/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('assets/js/app.js')}}"></script>
 </body>
 
 </html>
