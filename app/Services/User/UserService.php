@@ -105,7 +105,7 @@ class UserService extends Service
 
             if (isset($data['file']) && file_exists($data['file'])) {
                 $this->deleteFile($this->uploadPath, $user->image);
-                $data['image'] = $this->upload($data['file'], null, null, $this->uploadPath);
+                $data['image'] = $this->upload($data['file'], $this->uploadPath);
             }
 
             $user->update($data);

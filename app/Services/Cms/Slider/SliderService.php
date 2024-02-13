@@ -111,7 +111,7 @@ class SliderService extends Service
                 if (!empty($slider->image)) {
                     $this->deleteFile($this->uploadPath, $slider->image);
                 }
-                $data['image'] = $this->upload($data['image_file'], null, null, $this->uploadPath);
+                $data['image'] = $this->upload($data['image_file'], $this->uploadPath);
             }
 
             return $slider->update($data);

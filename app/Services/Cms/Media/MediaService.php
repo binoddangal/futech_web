@@ -63,7 +63,7 @@ class MediaService extends Service
             $name = $data['name'];
             foreach ($data['file'] as $i => $file) {
                 $i = (int)$i;
-                $data['path'] = $this->upload($file, null, null, $this->uploadPath, 'public');
+                $data['path'] = $this->upload($file, $this->uploadPath, 'public');
                 $data['size'] = ($size[$i] / 100);//converted to kb
                 $data['title'] = ($name[$i]);
                 $data['type'] = $this->getFileType($type[$i]);
@@ -138,7 +138,7 @@ class MediaService extends Service
                 if (!empty($media->path)) {
                     $this->deleteFile($this->uploadPath, $media->path);
                 }
-                $data['path'] = $this->upload($data['path'], null, null, $this->uploadPath, 'public');
+                $data['path'] = $this->upload($data['path'], $this->uploadPath, 'public');
             }
 //            if ($data["is_featured"]) {
 //                $this->makeNonFeatured($id);
