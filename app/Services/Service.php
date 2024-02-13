@@ -29,7 +29,7 @@ abstract class Service
     }
 
 
-    public function uploadFileAndImages(UploadedFile $file, $width = 320, $height = 320, $uploadPath, $visibility, $uploadToLocal = false, $fName = null)
+    public function uploadFileAndImages(UploadedFile $file, $uploadPath, $width = 320, $height = 320, $visibility, $fName = null)
     {
         $imageType = ['jpeg', 'jpg', 'png', 'JPEG', 'JPG', 'ico'];
 
@@ -79,7 +79,6 @@ abstract class Service
             $file->move($destination, $newFileName);
             $realPath = $uploadPath . "/" . $newFileName;
             if (getStorageType() != 'local') {
-                $realPath = $uploadPath . "/" . $fileName;
                 $this->uploadToS3($uploadPath, $realPath, null, $newFileName, $visibility);
             }
             return $newFileName;
@@ -112,7 +111,6 @@ abstract class Service
             $this->uploadToS3($uploadPath, $realPath, $thumbPath, $fileName, $visibility);
         }
         return $fileName;
-
     }
 
     public function createThumb(File $file, $width = 320, $height = 320)
@@ -148,12 +146,11 @@ abstract class Service
         } catch (\Exception $ex) {
             return false;
         }
-
     }
 
-    public function upload($file, $width = 1170, $height = 559, $uploadPath, $visibility = 'public', $binaryImage = false, $fileName = null)
+    public function upload($file, $uploadPath, $width = 320, $height = 320, $visibility = 'private', $fileName = null)
     {
-        return $this->uploadFileAndImages($file, 320, 320, $uploadPath, $visibility, false, $fileName);
+        return $this->uploadFileAndImages($file, $uploadPath,  $width, $height, $visibility, $fileName);
     }
 
     public function deleteUploaded($path, $imageName)
@@ -217,5 +214,4 @@ abstract class Service
             return $this->listFilesAndFolder($type);
         }
     }
-
 }

@@ -53,7 +53,7 @@ class PopupService extends Service
     {
         // try {
             if (!empty($data['image'])) {
-                $data['image'] = $this->upload($data['image'], null, null, $this->uploadPath);
+                $data['image'] = $this->upload($data['image'], $this->uploadPath);
             }
             $data['is_active'] = (isset($data['is_active']) && $data['is_active'] == true) ? true : 0;
             return $this->popup->create($data);
@@ -77,7 +77,7 @@ class PopupService extends Service
                 if (!empty($popup->path)) {
                     $this->deleteFile($this->uploadPath, $popup->path);
                 }
-                $data['image'] = $this->upload($data['image'], null, null, $this->uploadPath);
+                $data['image'] = $this->upload($data['image'], $this->uploadPath);
             }
 //            if ($data["is_featured"]) {
 //                $this->makeNonFeatured($id);

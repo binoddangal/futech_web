@@ -64,7 +64,7 @@ class TestimonialService extends Service
     {
         // try {
             if (!empty($data['image'])) {
-                $data['image'] = $this->upload($data['image'], null, null, $this->uploadPath);
+                $data['image'] = $this->upload($data['image'], $this->uploadPath);
             }
             $data['is_active'] = (isset($data['is_active']) && $data['is_active'] == true) ? true : 0;
             return $this->testimonial->create($data);
@@ -106,7 +106,7 @@ class TestimonialService extends Service
                 if (!empty($testimonial->path)) {
                     $this->deleteFile($this->uploadPath, $testimonial->path);
                 }
-                $data['image'] = $this->upload($data['image'], null, null, $this->uploadPath);
+                $data['image'] = $this->upload($data['image'], $this->uploadPath);
             }
             return $testimonial->update($data);
         } catch (\Exception $ex) {

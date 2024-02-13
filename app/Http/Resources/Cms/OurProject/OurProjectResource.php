@@ -14,13 +14,13 @@ class OurProjectResource extends JsonResource
      */
     public function toArray($request)
     {
-
         $resource = [
             'id' => $this->id,
             'title' => $this->title,
-            'slug'=>$this->slug,
+            'slug' => $this->slug,
             'description' => $this->description,
             'featured_photo' => $this->featured_photo,
+            'featured_photo_path' => $this->featured_photo_path,
             'is_active' => $this->is_active,
         ];
         return $resource;
