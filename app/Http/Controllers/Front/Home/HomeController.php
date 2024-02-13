@@ -58,7 +58,8 @@ class HomeController extends Controller
     public function about()
     {
         $ourProjects = $this->ourProject->getAllActive();
-        return \view('front.pages.about.aboutus', compact('ourProjects'));
+        $ourPartners = $this->ourPartner->getAllActive();
+        return \view('front.pages.about.aboutus', compact('ourProjects', 'ourPartners'));
     }
 
     public function contact()

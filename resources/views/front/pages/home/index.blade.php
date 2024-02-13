@@ -132,32 +132,32 @@ center/cover;
         @endif
 
         @if (count($ourPartners))
-        <section class="lg:py-120 py-20">
-            <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-                <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
-                    <div class="lg:col-span-2">
-                        <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
-                            Our Clients
-                        </h4>
-                        <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-interface-100">
-                            My Take care of our Customers
-                        </h2>
-                    </div>
-                    <div class="lg:col-span-3 w-full">
-                        <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10">
-                            @foreach ($ourPartners as $ourPartner)
-                            <div>
-                                <a href="{{ $ourPartner['url'] }}" target="_blank">
-                                <img class="h-20" src="{{ $ourPartner->featured_photo_path['real'] }}"
-                                    alt="{{ $ourPartner['title'] }}">
-                                </a>
+            <section class="lg:py-120 py-20">
+                <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                    <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-center">
+                        <div class="lg:col-span-2">
+                            <h4 class="text-porange-700  leading-normal text-xl font-medium capitalize mb-2">
+                                Our Clients
+                            </h4>
+                            <h2 class="text-4xl leading-normal lg:text-5xl lg:leading-snug font-bold text-interface-100">
+                                My Take care of our Customers
+                            </h2>
+                        </div>
+                        <div class="lg:col-span-3 w-full">
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10">
+                                @foreach ($ourPartners as $ourPartner)
+                                    <div>
+                                        <a href="{{ $ourPartner['url'] }}" target="_blank">
+                                            <img class="h-20" src="{{ $ourPartner->featured_photo_path['real'] }}"
+                                                alt="{{ $ourPartner['title'] }}">
+                                        </a>
+                                    </div>
+                                @endforeach
                             </div>
-                            @endforeach
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         @endif
     </main>
 @endsection
