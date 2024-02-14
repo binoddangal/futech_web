@@ -7,7 +7,7 @@ background: url('{{ asset('assets/images/bg/footer-dark-bg.jpg') }}') no-repeat 
         <div
             class="grid md:grid-cols-12 divide-y md:divide-y-0 lg:divide-x divide-white divide-opacity-10 justify-between gap-10">
             <div class="md:col-span-6 lg:col-span-3">
-                <a href="index.html" class="block mb-7">
+                <a href="/" class="block mb-7">
                     <img class="w-52" src="{{ getLogo(true) }}" alt="logo" />
                 </a>
                 <p class="text-white text-base">
