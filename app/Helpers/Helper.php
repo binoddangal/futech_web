@@ -329,8 +329,7 @@ function getToken($type)
 {
     if ($type == "email") {
         return hash_hmac('sha256', Str::random(40), config('app.key'));
-    }
-    else {
+    } else {
         return rand(123456, 987654);
     }
 }
@@ -341,19 +340,18 @@ function getFavIcon()
     $site_settings = SiteSetting::first();
 
     return !empty($site_settings) && !empty($site_settings->fav_icon) ? $site_settings->fav_icon_path['real'] : asset('assets/images/logo/Futech_Logo.png');
-
 }
 
-function getLogo($footer=false)
+function getLogo($footer = false)
 {
     $site_settings = SiteSetting::first();
-    if($footer){
+    if ($footer) {
         return !empty($site_settings) && !empty($site_settings->footer_logo) ? $site_settings->footer_logo_path['real'] : asset('assets/images/logo/Futech_LogoWhite.png');
     }
     return !empty($site_settings->logo) ? $site_settings->logo_path['real'] : asset('assets/images/logo/Futech_Logo.png');
 }
 
-function getAdminLogo($footer=false)
+function getAdminLogo($footer = false)
 {
     $site_settings = SiteSetting::first();
 
@@ -435,13 +433,14 @@ function getDateBy($filter_by)
 }
 
 
-function getCurrentYear(){
-    return(\Carbon\Carbon::now()->year);
+function getCurrentYear()
+{
+    return (\Carbon\Carbon::now()->year);
 }
 
 function getInvoiceNumber($invoiceId)
 {
-   return str_pad($invoiceId, 9, '0', STR_PAD_LEFT);
+    return str_pad($invoiceId, 9, '0', STR_PAD_LEFT);
 }
 
 
@@ -506,7 +505,7 @@ function getSetting()
 
 function setSMTP()
 {
-    if(env('APP_ENV') != 'local') {
+    if (env('APP_ENV') != 'local') {
         $setting = getSetting();
         Config::set('mail.mailers.smtp.driver', $setting->mail_driver);
         Config::set('mail.mailers.smtp.host', $setting->mail_host);
@@ -529,7 +528,7 @@ function getImagePath($uploadPath, $imageName, $signed = true)
         $realPath = buildUploadPathUrl($realPath);
         $thumbPath = buildUploadPathUrl($thumbPath);
 
-        if(checkFileType($imageName) == 'image') {
+        if (checkFileType($imageName) == 'image') {
             $imagePath = [
                 "real" => s3_image_url($realPath, $signed),
                 "thumb" => s3_image_url($thumbPath, $signed),
@@ -539,7 +538,6 @@ function getImagePath($uploadPath, $imageName, $signed = true)
                 "real" => s3_image_url($realPath, $signed),
             ];
         }
-
     } else {
         $imagePath = [
             "real" => asset($uploadPath . "/" . $imageName),
@@ -558,7 +556,7 @@ function checkForImage($imageName)
     $spreadType = ['xls', 'xlsx'];
 
     $image = explode('.', $imageName);
-    if(in_array($image[1], $imageType))
+    if (in_array($image[1], $imageType))
         return "image";
 
     if (in_array($image[1], $docType)) {
@@ -595,7 +593,7 @@ function s3_image_url($path, $signed = false)
 {
     setStorageConfig();
     $storageDisk = getStorageType();
-    if($storageDisk) {
+    if ($storageDisk) {
         if ($signed) {
             $client = \Illuminate\Support\Facades\Storage::disk($storageDisk)->getClient();
             $command = $client->getCommand('GetObject', [
@@ -613,26 +611,24 @@ function s3_image_url($path, $signed = false)
 
 function setStorageConfig()
 {
-    if(getStorageType() == 'aws' || getStorageType() == 'wasabi') {
+    if (getStorageType() == 'aws' || getStorageType() == 'wasabi') {
         $setting = SiteSetting::first();
-        if($setting->storage_type=='aws')
-        {
+        if ($setting->storage_type == 'aws') {
             Config::set('filesystems.disks.aws.driver', "s3");
             Config::set('filesystems.disks.aws.key', $setting->storage_access_key);
             Config::set('filesystems.disks.aws.secret', $setting->storage_secret_key);
             Config::set('filesystems.disks.aws.region', $setting->storage_region);
             Config::set('filesystems.disks.aws.bucket', $setting->storage_bucket_name);
-            Config::set('filesystems.disks.aws.endpoint', 'https://s3.'.$setting->storage_region.'.amazonaws.com');
+            Config::set('filesystems.disks.aws.endpoint', 'https://s3.' . $setting->storage_region . '.amazonaws.com');
         }
 
-        if($setting->storage_type=='wasabi')
-        {
+        if ($setting->storage_type == 'wasabi') {
             Config::set('filesystems.disks.wasabi.driver', "s3");
             Config::set('filesystems.disks.wasabi.key', $setting->storage_access_key);
             Config::set('filesystems.disks.wasabi.secret', $setting->storage_secret_key);
             Config::set('filesystems.disks.wasabi.region', $setting->storage_region);
             Config::set('filesystems.disks.wasabi.bucket', $setting->storage_bucket_name);
-            Config::set('filesystems.disks.wasabi.endpoint', 'https://s3.'.$setting->storage_region.'.wasabisys.com');
+            Config::set('filesystems.disks.wasabi.endpoint', 'https://s3.' . $setting->storage_region . '.wasabisys.com');
         }
     }
 }
@@ -668,7 +664,7 @@ function convertDate($date, $option = 'ad')
         $date = explode('-', $date);
         $obj = new NepaliDate();
         if (isset($date[0]) && isset($date[1]) && isset($date[2])) {
-            if($option == 'ad')
+            if ($option == 'ad')
                 $newDate = $obj->convertBsToAd($date[0], $date[1], $date[2]);
             else
                 $newDate = $obj->convertAdToBs($date[0], $date[1], $date[2]);
@@ -685,4 +681,9 @@ function convertDate($date, $option = 'ad')
         return null;
     }
     return null;
+}
+
+function shareBlogLink($router, $blog)
+{
+    return \Share::page($router, $blog->title)->facebook()->twitter()->linkedin()->telegram()->whatsapp();
 }

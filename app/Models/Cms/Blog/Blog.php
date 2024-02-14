@@ -42,7 +42,7 @@ class Blog extends Model
         'is_active',
     ];
 
-    protected $appends = ['categories', 'category_ids', 'image_path', 'author_image_path'];
+    protected $appends = ['categories', 'category_ids', 'image_path', 'author_image_path', 'share_link'];
 
     public function getImagePathAttribute()
     {
@@ -51,6 +51,14 @@ class Blog extends Model
             $imagePath = getImagePath($this->uploadPath, $this->image);
         }
         return $imagePath;
+    }
+
+    public function getShareLinkAttribute()
+    {
+        if ($this) {
+            return shareBlogLink(route('blog.detail', ['slug' => $this->slug]), $this);
+        }
+        return null;
     }
 
     public function getAuthorImagePathAttribute()

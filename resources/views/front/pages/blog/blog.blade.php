@@ -53,9 +53,9 @@ background: url('{{ asset('assets/images/bg/brcm.jpg') }}') no-repeat center
                                     <h1 class="title-font text-lg font-medium text-gray-600 mb-3">{{ $blog->title }}</h1>
                                     <p class="leading-relaxed mb-3">{!! Str::limit($blog->content, 100, '...') !!}</p>
                                     <div class="flex items-center flex-wrap ">
-                                        <button
+                                        <a href="{{ route('blog.detail', ['slug' => $blog->slug]) }}"
                                             class="bg-black text-white transform hover:scale-110 transition duration-500 px-4 py-1 rounded-lg">Learn
-                                            more</button>
+                                            more</a>
                                     </div>
                                 </div>
                             </div>
