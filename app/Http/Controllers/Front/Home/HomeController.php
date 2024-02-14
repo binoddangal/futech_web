@@ -48,10 +48,10 @@ class HomeController extends Controller
         return view('front.pages.blog.blog', compact('category', 'blogs'));
     }
 
-    public function blogDetails($slug)
+    public function blogDetails()
     {
-        $blogs = $this->blog->getAllActive();
-        $blog = $this->blog->getBySlug($slug);
+        // $blogs = $this->blog->getAllActive();
+        // $blog = $this->blog->getBySlug($slug);
         return view('front.pages.blog.details');
     }
 
